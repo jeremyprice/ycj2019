@@ -1,9 +1,9 @@
 activities:
   - title: "01: Shift Cipher"
-    url: /shift
+    url: /shift.html
   - title: "02: Substitution Cipher"
-    url: /substitution
+    url: /substitution.html
   - title: "03: Vigenère Cipher"
-    url: /vigenere
+    url: /vigenere.html
   - title: "Challenges"
-    url: /challenges
+    url: /challenges.html
