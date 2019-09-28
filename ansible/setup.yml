@@ -25,6 +25,10 @@
         # notify:
         #   - restart app
 
+      - name: link the ycj static site directory
+        file: src={{ install_directory }}/site/_site
+              path={{ install_directory }}/ycj state=link
+
       # - name: install the system files
       #   template: src={{ item.src }} dest={{ item.dest }}
       #   notify:
