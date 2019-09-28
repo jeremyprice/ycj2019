@@ -2,6 +2,8 @@
 
 import ciphers
 import unittest
+import random
+import string
 
 
 class TestShiftCipher(unittest.TestCase):
@@ -60,6 +62,49 @@ class TestShiftCipher(unittest.TestCase):
         expected = 'x y z'
         plaintext = shift.decrypt(ciphertext, 3)
         self.assertEqual(plaintext, expected)
+
+
+class TestSubstitutionCipher(unittest.TestCase):
+    def test_short_encrypt(self):
+        subs = ciphers.substitution()
+        plaintext = 'abc'
+        key = 'xhe' + 23*' '
+        expected = 'xhe'
+        ciphertext = subs.encrypt(plaintext, key)
+        self.assertEqual(ciphertext, expected)
+
+    def test_short_decrypt(self):
+        subs = ciphers.substitution()
+        ciphertext = 'xhe'
+        key = 'xhe' + 23*' '
+        expected = 'abc'
+        plaintext = subs.decrypt(ciphertext, key)
+        self.assertEqual(plaintext, expected)
+
+    def test_full_encrypt(self):
+        subs = ciphers.substitution()
+        plaintext = 'hello'
+        key = 'qagydutpohckbjxsmwvrfizeln'
+        expected = 'pdkkx'
+        ciphertext = subs.encrypt(plaintext, key)
+        self.assertEqual(ciphertext, expected)
+
+    def test_full_decrypt(self):
+        subs = ciphers.substitution()
+        ciphertext = 'pdkkx'
+        key = 'qagydutpohckbjxsmwvrfizeln'
+        expected = 'hello'
+        plaintext = subs.decrypt(ciphertext, key)
+        self.assertEqual(plaintext, expected)
+
+    def test_random_roundtrip(self):
+        subs = ciphers.substitution()
+        expected = 'This is a secret!'
+        for i in range(100):  # run 100 random keys through the round trip
+            key = ''.join(random.sample(string.ascii_lowercase, k=len(string.ascii_lowercase)))
+            ciphertext = subs.encrypt(expected, key)
+            plaintext = subs.decrypt(ciphertext, key)
+            self.assertEqual(plaintext, expected)
 
 
 if __name__ == '__main__':

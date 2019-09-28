@@ -41,3 +41,15 @@ class shift(cipher):
             plainletter += base
             plaintext.append(chr(plainletter))
         return ''.join(plaintext)
+
+
+class substitution(cipher):
+    def encrypt(self, plaintext, key):
+        t = str.maketrans(string.ascii_lowercase + string.ascii_uppercase,
+                          key.lower() + key.upper())
+        return plaintext.translate(t)
+
+    def decrypt(self, ciphertext, key):
+        t = str.maketrans(key.lower() + key.upper(),
+                          string.ascii_lowercase + string.ascii_uppercase)
+        return ciphertext.translate(t)

@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 
 import ciphers
+import string
 
+print('***** shift cipher page *****')
 plain = 'Really important message contained herein'
 shift = ciphers.shift()
 print('Shift by -3: {} | {}'.format(plain, shift.encrypt(plain, -3)))
@@ -21,3 +23,18 @@ print('Shift by 7: {} | {}'.format(plain, shift.encrypt(plain, 7)))
 plain = "Goodbye World?"
 shift = ciphers.shift()
 print('Shift by -4: {} | {}'.format(plain, shift.encrypt(plain, -4)))
+
+print('***** substitution cipher page *****')
+plain = string.ascii_lowercase
+shift = ciphers.shift()
+print('Shift by 6: {} | {}'.format(plain, shift.encrypt(plain, 6)))
+
+key = 'qagydutpohckbjxsmwvrfizeln'
+plain = "It's the best day ever!"
+subs = ciphers.substitution()
+print('Substitution: {} | {}'.format(plain, subs.encrypt(plain, key)))
+
+key = 'qagydutpohckbjxsmwvrfizeln'
+plain = "Thanks for decrypting this"
+subs = ciphers.substitution()
+print('Substitution: {} | {}'.format(plain, subs.encrypt(plain, key)))
