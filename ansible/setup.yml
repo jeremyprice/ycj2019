@@ -1,0 +1,51 @@
+---
+  - name: Configure server
+    hosts: strengths-web
+
+    vars:
+      install_directory: /var/app/ycj
+      runtime_user: www-data
+      gunicorn_sock: /run/ycj/socket
+      gunicorn_port: "9009"
+      listen_port: "80"
+
+    tasks:
+
+      - name: create deployment directories
+        file: path={{ install_directory }} state=directory owner={{ runtime_user }}
+
+      # - name: create runtime tmp directory
+      #   file: path=/run/ycj state=directory owner={{ runtime_user }}
+
+      - name: clone the repo
+        git: repo=git://github.com/jeremyprice/ycj2019
+             dest={{ install_directory }}
+        become: yes
+        become_user: "{{ runtime_user }}"
+        # notify:
+        #   - restart app
+
+      # - name: install the system files
+      #   template: src={{ item.src }} dest={{ item.dest }}
+      #   notify:
+      #     - reload systemd
+      #     - restart app
+      #   with_items:
+      #     - { src: "systemd.service.j2", dest: "/lib/systemd/system/ycj.service" }
+      #     - { src: "systemd.socket.j2", dest: "/lib/systemd/system/ycj.socket" }
+      #     - { src: "tmpfiles.d.conf.j2", dest: "/usr/lib/tmpfiles.d/ycj.conf" }
+
+      # - name: ensure nginx and app are started and boot enabled
+      #   service: name={{ item }} state=started enabled=yes
+      #   with_items:
+      #     - ycj
+
+    # handlers:
+    #   - name: reload systemd
+    #     command: systemctl daemon-reload
+    #
+    #   - name: restart app
+    #     service: name=ycj state=restarted
+    #
+    #   - name: restart nginx
+    #     service: name=nginx state=restarted

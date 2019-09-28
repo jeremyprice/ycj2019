@@ -1,0 +1,17 @@
+[Unit]
+Description=YCJ gunicorn daemon
+Requires=ycj.socket
+After=network.target
+
+[Service]
+PIDFile=/run/ycj/pid
+User={{ runtime_user }}
+Group={{ runtime_user }}
+WorkingDirectory={{ install_directory }}
+ExecStart=/usr/local/bin/gunicorn --workers 4 --pid /run/ycj/pid server:app
+ExecReload=/bin/kill -s HUP $MAINPID
+ExecStop=/bin/kill -s TERM $MAINPID
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

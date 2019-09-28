@@ -1,0 +1,9 @@
+[Unit]
+Description=ycj gunicorn socket
+
+[Socket]
+ListenStream={{ gunicorn_sock }}
+ListenStream=127.0.0.1:{{ gunicorn_port }}
+
+[Install]
+WantedBy=sockets.target
