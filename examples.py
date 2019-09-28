@@ -48,3 +48,22 @@ keyword = 'youthcodejam'
 plain = "I hope I don't run out of time"
 v = ciphers.vigenere()
 print('Vigenère: {} | {}'.format(plain, v.encrypt(plain, keyword)))
+
+print('***** Challenges *****')
+plain = 'We the People of the United States, in Order to form a more perfect Union, establish Justice, insure domestic Tranquility, provide for the common defence, promote the general Welfare, and secure the Blessings of Liberty to ourselves and our Posterity, do ordain and establish this Constitution for the United States of America.'
+shift = ciphers.shift()
+print('Shift by -8: {} | {}'.format(plain, shift.encrypt(plain, -8)))
+
+plain = 'I pledge allegiance to the Flag of the United States of America, and to the Republic for which it stands, one Nation under God, indivisible, with liberty and justice for all.'
+keyword = 'ycj'
+v = ciphers.vigenere()
+print('Vigenère with key "ycj": {} | {}'.format(plain, v.encrypt(plain, keyword)))
+
+plain = 'Honor the Texas flag; I pledge allegiance to thee, Texas, one state under God, one and indivisible.'
+key = 'jhgvncoytuiskdxmarbqplfzew'
+subs = ciphers.substitution()
+print('Substitution key = "jhgvncoytuiskdxmarbqplfzew": {} | {}'.format(plain, subs.encrypt(plain, key)))
+
+plain = 'Youth Code Jam provides innovative, impactful and family-focused out of school time, hands-on computing programs for K-12 students as well as teacher professional development designed to bring computer science to every school and every classroom.'
+shift = ciphers.shift()
+print('Shift by 10: {} | {}'.format(plain, shift.encrypt(plain, 10)))

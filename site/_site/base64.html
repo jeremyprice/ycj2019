@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Vigenère Cipher - Cryptography and Cybersecurity</title>
+<!-- begin _includes/seo.html --><title>Base64 Encoding - Cryptography and Cybersecurity</title>
 <meta name="description" content="Work through some online activities to learn about cryptography and cybersecurity.  Try out different ciphers, encrypt and decrypt strings, impress your friends and frustrate your enemies!">
 
 
@@ -17,8 +17,8 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Cryptography and Cybersecurity">
-<meta property="og:title" content="Vigenère Cipher">
-<meta property="og:url" content="http://23.253.253.83//ycj/vigenere">
+<meta property="og:title" content="Base64 Encoding">
+<meta property="og:url" content="http://23.253.253.83//ycj/base64">
 
 
 
@@ -32,7 +32,7 @@
 
 
 
-<link rel="canonical" href="http://23.253.253.83//ycj/vigenere">
+<link rel="canonical" href="http://23.253.253.83//ycj/base64">
 
 
 
@@ -208,7 +208,7 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Vigenère Cipher">
+    <meta itemprop="headline" content="Base64 Encoding">
     
     
     
@@ -216,7 +216,7 @@
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">Vigenère Cipher
+          <h1 id="page-title" class="page__title" itemprop="headline">Base64 Encoding
 </h1>
           
         </header>
@@ -224,22 +224,15 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>We’ve done some simple shifting and substitutions for our ciphers, now lets add some more complexity.  A simple shift is easy to crack because once you know the shift distance for one of the letters you know the shift distance for all the letters.  What if we varied the shift distance for each letter?  Ciphers like this are called polyalphabetic ciphers because they involve using different keys (alphabets).</p>
+        <p>This algorithm isn’t technically an encryption/decryption algorithm, but it does allow us to encode information so it can be more easily encrypted.  Base64 encoding is a technique we can use to turn a stream of arbitrary data (not just letters) into letters and numbers.  Sometimes we need to do this in order to send the information without it getting lost or misinterpreted.  It can also be used as a first step to encode our information before we encrypt it.</p>
 
-<p>The polyalphabetic cipher we are going to learn about is the Vigenère cipher.  This cipher uses the Caesar cipher, but instead of one shift for all the characters it uses a different shift for each character.  The image below shows a Vigenère square and illustrates how each letter can be encoded using a different shift distance.</p>
+<p>The first thing to understand about Base64 encoding is that we will be dealing with binary numbers.  If you don’t know about binary numbers, I suggest you read <a href="https://en.wikipedia.org/wiki/Binary_number">this Wikipedia article</a> on binary numbers and <a href="https://en.wikipedia.org/wiki/Binary_code">this Wikipedia article</a> on binary code and make sure it makes sense before you move on.</p>
 
-<p><img src="/ycj/images/Vigenere_square_shading.svg" alt="Vigenère square" /></p>
+<p>The core premise behind Base64 encoding is that a series of characters in the message is really just a continuous stream of 1s and 0s.  Usually, we look at those 1s and 0s in 8-bit chunks and interpret the value as a character <a href="https://en.wikipedia.org/wiki/ASCII">see the ASCII chart for more info</a>.  With Base64 we put three of those 8-bit values together (giving us 24-bits total) and look at them as four 6-bit values.  Since 6-bit values are hard for humans to read and understand, we need to come up with a representation for each 6-bit value that will be easy to use.  Below is a table that shows how we are going to represent our 6-bit values.</p>
 
-<p>To use a Vigenère as our cipher we need one more piece: a keyword.  The way we choose which Caesar cipher to use for each letter is goverend by a keyword or phrase.  As an example, let’s choose the keyword <code class="highlighter-rouge">code</code> to encode our message <code class="highlighter-rouge">apple</code>.  We use the <code class="highlighter-rouge">code</code> keyword by looking in the Vigenère square at the row <code class="highlighter-rouge">c</code> for the cipher for the first letter in our plaintext <code class="highlighter-rouge">a</code>.  We find the column that corresponds to the plaintext <code class="highlighter-rouge">a</code> and go down the rows until we get to the keyword letter <code class="highlighter-rouge">c</code>.  That gives us our ciphertext <code class="highlighter-rouge">c</code>.  What do we do if our plaintext is longer than our keyword?  We just repeat the keyword as many times as necessary.  Here is the full example (note that we repeated our keyword):</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>keyword:    codec
-plaintext:  apple
-ciphertext: cdspg
-</code></pre></div></div>
+<p><img src="/ycj/images/base64_index_table.png" alt="Base64 index table" /></p>
 
-<p>Now it is your turn to try it.  Encode the following plaintext using the keyword below.</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>keyword:   secret
-plaintext: I love this cipher!
-</code></pre></div></div>
+<p>To use the table, we look for the 6-bit binary value we need to represent and then look over at the Char in that row.  Thus, if we want to encode the values <code class="highlighter-rouge">010110</code> and <code class="highlighter-rouge">111000</code> the Chars would be <code class="highlighter-rouge">W</code> and <code class="highlighter-rouge">4</code> respectively.  Note that the table has both lowercase and uppercase letters so you need to make sure you capture the case.</p>
 
 <p><button onclick="showHide('ct1')">Click here to see the answer</button></p>
 <div id="ct1" style="display: none;
@@ -255,32 +248,6 @@ plaintext: I love this cipher!
     padding: 1em;">
 This is the ciphertext message:<br />
 <code class="highlighter-rouge">A nfzx xjzw umryik!</code><br />
-Did you get it right?
-</div>
-
-<p>Notice that unlike the substitution ciphers we worked with, the Vigenère cipher requires us to have a keyword that everyone in our secret club needs to know.  This is referred to as a pre-shared key meaning that we have to share the key before we start sending and receiving messages.</p>
-
-<p>The decryption of the message looks very similar to the encryption.  We still need our keyword, but instead of using the column that is associated with the letter we are decrypting we find the letter in the row and look up to the letter at the top of the column.  Try it with one of the examples we did for the encryption.  Can you decrypt the ciphertext and get the plaintext?</p>
-
-<p>Try to decrypt this encrypted message:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>keyword:    youthcodejam
-ciphertext: G bhwg L moz'h kbp ryc ad nbtg
-</code></pre></div></div>
-
-<p><button onclick="showHide('pt1')">Click here to see the answer</button></p>
-<div id="pt1" style="display: none;
-    box-sizing: border-box;
-    background-color: #000;
-    position: relative;
-    margin-bottom: 1em;
-    background: #263238;
-    color: #eeffff;
-    font-size: 0.75em;
-    line-height: 1.8;
-    border-radius: 4px;
-    padding: 1em;">
-This is the plaintext message:<br />
-<code class="highlighter-rouge">I hope I don't run out of time</code><br />
 Did you get it right?
 </div>
 

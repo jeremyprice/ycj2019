@@ -15,7 +15,7 @@ class shift(cipher):
     def encrypt(self, plaintext, distance):
         ciphertext = []
         for letter in plaintext:
-            if letter in string.punctuation or letter in string.whitespace:
+            if letter not in string.ascii_lowercase and letter not in string.ascii_uppercase:
                 ciphertext.append(letter)
                 continue
             if letter.islower():
@@ -30,7 +30,7 @@ class shift(cipher):
     def decrypt(self, ciphertext, distance):
         plaintext = []
         for letter in ciphertext:
-            if letter in string.punctuation or letter in string.whitespace:
+            if letter not in string.ascii_lowercase and letter not in string.ascii_uppercase:
                 plaintext.append(letter)
                 continue
             if letter.islower():
@@ -66,7 +66,7 @@ class vigenere(cipher):
             keyword += key
         ciphertext = []
         for idx, letter in enumerate(plaintext):
-            if letter in string.punctuation or letter in string.whitespace:
+            if letter not in string.ascii_lowercase and letter not in string.ascii_uppercase:
                 ciphertext.append(letter)
                 continue
             key = keyword[idx]
@@ -88,7 +88,7 @@ class vigenere(cipher):
             keyword += key
         plaintext = []
         for idx, letter in enumerate(ciphertext):
-            if letter in string.punctuation or letter in string.whitespace:
+            if letter not in string.ascii_lowercase and letter not in string.ascii_uppercase:
                 plaintext.append(letter)
                 continue
             key = keyword[idx]

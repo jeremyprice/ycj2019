@@ -5,3 +5,5 @@ activities:
     url: /substitution
   - title: "03: Vigenère Cipher"
     url: /vigenere
+  - title: "Challenges"
+    url: /challenges

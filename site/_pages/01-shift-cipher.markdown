@@ -94,6 +94,8 @@ Keep doing those steps until you feel like you understand the shift cipher well.
 
 [Click here to learn more about shift ciphers.](https://en.wikipedia.org/wiki/Caesar_cipher)
 
+Click the next activity on the left when you are ready to continue.
+
 <script>
 function showHide(elId) {
   var x = document.getElementById(elId);

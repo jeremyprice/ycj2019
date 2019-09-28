@@ -1,0 +1,453 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.16.6 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Cryptography Challenges - Cryptography and Cybersecurity</title>
+<meta name="description" content="Work through some online activities to learn about cryptography and cybersecurity.  Try out different ciphers, encrypt and decrypt strings, impress your friends and frustrate your enemies!">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Cryptography and Cybersecurity">
+<meta property="og:title" content="Cryptography Challenges">
+<meta property="og:url" content="http://23.253.253.83//ycj/challenges">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="http://23.253.253.83//ycj/challenges">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "http://23.253.253.83//ycj/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/ycj/feed.xml" type="application/atom+xml" rel="alternate" title="Cryptography and Cybersecurity Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/ycj/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/ycj/">
+          Cryptography and Cybersecurity
+          
+        </a>
+        <ul class="visible-links"></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          
+          
+
+          <a href="/ycj/shift"><span class="nav__sub-title">01: Shift Cipher</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/ycj/substitution"><span class="nav__sub-title">02: Substitution Cipher</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/ycj/vigenere"><span class="nav__sub-title">03: Vigenère Cipher</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/ycj/challenges"><span class="nav__sub-title">Challenges</span></a>
+        
+
+        
+      </li>
+    
+  </ul>
+</nav>
+    
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Cryptography Challenges">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Cryptography Challenges
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <h2 id="congratulations">Congratulations!</h2>
+
+<p>Now that you know the <a href="/ycj/shift">Shift Cipher</a>, the <a href="/ycj/substitution">Substitution Cipher</a>, and the <a href="/ycj/vigenere">Vigenère Cipher</a> you are ready to try to decode some intercepted communications.  Below are some communications we’ve intercepted.  The encryption cipher is unknown, as well as any of the cipher parameters.  To succeed at each challenge you will need to determine the encryption cipher, it’s parameters, and decode the message.  We believe that all the messages are common phrases or documents, but you’ll have to verify our assumptions.  Good luck!</p>
+
+<h2 id="challenge-no-1">Challenge no. 1</h2>
+<p><code class="highlighter-rouge">Ow lzw Hwghdw gx lzw Mfalwv Klslwk, af Gjvwj lg xgje s egjw hwjxwul Mfagf, wklstdakz Bmklauw, afkmjw vgewklau Ljsfimadalq, hjgnavw xgj lzw ugeegf vwxwfuw, hjgeglw lzw ywfwjsd Owdxsjw, sfv kwumjw lzw Tdwkkafyk gx Datwjlq lg gmjkwdnwk sfv gmj Hgklwjalq, vg gjvsaf sfv wklstdakz lzak Ugfklalmlagf xgj lzw Mfalwv Klslwk gx Sewjaus.
+</code></p>
+
+<p><button onclick="showHide('ch1')">Need a hint?</button></p>
+<div id="ch1" style="display: none;
+    box-sizing: border-box;
+    background-color: #000;
+    position: relative;
+    margin-bottom: 1em;
+    background: #263238;
+    color: #eeffff;
+    font-size: 0.75em;
+    line-height: 1.8;
+    border-radius: 4px;
+    padding: 1em;">
+It looks like it might be a shift cipher...
+</div>
+
+<p><button onclick="showHide('cs1')">Click here for the solution</button></p>
+<div id="cs1" style="display: none;
+    box-sizing: border-box;
+    background-color: #000;
+    position: relative;
+    margin-bottom: 1em;
+    background: #263238;
+    color: #eeffff;
+    font-size: 0.75em;
+    line-height: 1.8;
+    border-radius: 4px;
+    padding: 1em;">
+It is a shift cipher with a distance of <code class="highlighter-rouge">-8</code><br />
+Here is the plaintext:<br />
+<code class="highlighter-rouge">We the People of the United States, in Order to form a more perfect Union, establish Justice, insure domestic Tranquility, provide for the common defence, promote the general Welfare, and secure the Blessings of Liberty to ourselves and our Posterity, do ordain and establish this Constitution for the United States of America.</code><br />
+</div>
+
+<h2 id="challenge-no-2">Challenge no. 2</h2>
+<p><code class="highlighter-rouge">G yjgmeg ynuciryplc cm cfg Dnje xd cfg Sprrgm Ucyvnq xd Jkgagej, jlf rq rjn Tnnwkjkl hxp ffklf rr brcwbu, qwc Wyvrmp spmct Eqm, rlfrtkbgduc, ukcf ugdnpvh cwb ssucgen hxp jjn.</code></p>
+
+<p><button onclick="showHide('ch2')">Need a hint?</button></p>
+<div id="ch2" style="display: none;
+    box-sizing: border-box;
+    background-color: #000;
+    position: relative;
+    margin-bottom: 1em;
+    background: #263238;
+    color: #eeffff;
+    font-size: 0.75em;
+    line-height: 1.8;
+    border-radius: 4px;
+    padding: 1em;">
+This one looks more like a Vigenère cipher...
+</div>
+
+<p><button onclick="showHide('cs2')">Click here for the solution</button></p>
+<div id="cs2" style="display: none;
+    box-sizing: border-box;
+    background-color: #000;
+    position: relative;
+    margin-bottom: 1em;
+    background: #263238;
+    color: #eeffff;
+    font-size: 0.75em;
+    line-height: 1.8;
+    border-radius: 4px;
+    padding: 1em;">
+It is a Vigenère cipher with a keyword of <code class="highlighter-rouge">ycj</code><br />
+Here is the plaintext:<br />
+<code class="highlighter-rouge">I pledge allegiance to the Flag of the United States of America, and to the Republic for which it stands, one Nation under God, indivisible, with liberty and justice for all.</code><br />
+</div>
+
+<h2 id="challenge-no-3">Challenge no. 3</h2>
+<p><code class="highlighter-rouge">Yxdxr qyn Qnzjb csjo; T msnvon jssnotjdgn qx qynn, Qnzjb, xdn bqjqn pdvnr Oxv, xdn jdv tdvtltbthsn.</code></p>
+
+<p><button onclick="showHide('ch3')">Need a hint?</button></p>
+<div id="ch3" style="display: none;
+    box-sizing: border-box;
+    background-color: #000;
+    position: relative;
+    margin-bottom: 1em;
+    background: #263238;
+    color: #eeffff;
+    font-size: 0.75em;
+    line-height: 1.8;
+    border-radius: 4px;
+    padding: 1em;">
+This behaves like a substitution cipher...
+</div>
+
+<p><button onclick="showHide('cs3')">Click here for the solution</button></p>
+<div id="cs3" style="display: none;
+    box-sizing: border-box;
+    background-color: #000;
+    position: relative;
+    margin-bottom: 1em;
+    background: #263238;
+    color: #eeffff;
+    font-size: 0.75em;
+    line-height: 1.8;
+    border-radius: 4px;
+    padding: 1em;">
+It is a substitution cipher with a key of <code class="highlighter-rouge">jhgvncoytuiskdxmarbqplfzew</code><br />
+Here is the plaintext:<br />
+<code class="highlighter-rouge">Honor the Texas flag; I pledge allegiance to thee, Texas, one state under God, one and indivisible.</code><br />
+</div>
+
+<h2 id="challenge-no-4">Challenge no. 4</h2>
+<p><code class="highlighter-rouge">Iyedr Myno Tkw zbyfsnoc sxxyfkdsfo, swzkmdpev kxn pkwsvi-pymecon yed yp cmryyv dswo, rkxnc-yx mywzedsxq zbyqbkwc pyb U-12 cdenoxdc kc govv kc dokmrob zbypoccsyxkv nofovyzwoxd nocsqxon dy lbsxq mywzedob cmsoxmo dy ofobi cmryyv kxn ofobi mvkccbyyw</code></p>
+
+<p><button onclick="showHide('ch4')">Need a hint?</button></p>
+<div id="ch4" style="display: none;
+    box-sizing: border-box;
+    background-color: #000;
+    position: relative;
+    margin-bottom: 1em;
+    background: #263238;
+    color: #eeffff;
+    font-size: 0.75em;
+    line-height: 1.8;
+    border-radius: 4px;
+    padding: 1em;">
+This one screams shift cipher...
+</div>
+
+<p><button onclick="showHide('cs4')">Click here for the solution</button></p>
+<div id="cs4" style="display: none;
+    box-sizing: border-box;
+    background-color: #000;
+    position: relative;
+    margin-bottom: 1em;
+    background: #263238;
+    color: #eeffff;
+    font-size: 0.75em;
+    line-height: 1.8;
+    border-radius: 4px;
+    padding: 1em;">
+It is a shift cipher with a distance of <code class="highlighter-rouge">10</code><br />
+Here is the plaintext:<br />
+<code class="highlighter-rouge">Youth Code Jam provides innovative, impactful and family-focused out of school time, hands-on computing programs for K-12 students as well as teacher professional development designed to bring computer science to every school and every classroom.</code><br />
+</div>
+
+<h3 id="challenge-no-5">Challenge no. 5</h3>
+<p>This one isn’t an encrypted phrase, it is a bigger challenge: Can you write some code that will do these encryption and decryption tasks for you?</p>
+<ul>
+  <li>What language would you write it in?</li>
+  <li>Which part would you write first (encryption or decryption)?</li>
+  <li>Which algorithm would you like to tackle?</li>
+</ul>
+
+<script>
+function showHide(elId) {
+  var x = document.getElementById(elId);
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+
+    <li><a href="/ycj/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 Cryptography and Cybersecurity. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/ycj/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
