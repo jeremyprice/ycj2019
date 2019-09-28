@@ -2,6 +2,10 @@
 
 import ciphers
 
+plain = 'Really important message contained herein'
+shift = ciphers.shift()
+print('Shift by -3: {} | {}'.format(plain, shift.encrypt(plain, -3)))
+
 plain = 'test message'
 shift = ciphers.shift()
 print('Shift by 2: {} | {}'.format(plain, shift.encrypt(plain, 2)))

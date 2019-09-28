@@ -11,6 +11,12 @@ The shift cipher is a very common cipher that is easy to understand, easy to enc
 ![example shift cipher](/images/Caesar_cipher_left_shift_of_3.svg)
 Here is an example of the shift cipher.  For this example, we chose a left shift of 3 for each letter (often represented as a distance of `-3`).  Thus, each occurrence of the letter `E` in the plaintext message becomes the letter `B` in the ciphertext message.
 
+If we encrypt a message using the left shift of 3 example you see above it would look something like this:
+```
+Really important message contained herein
+Obxiiv fjmloqxkq jbppxdb zlkqxfkba ebobfk
+```
+
 Now it is your turn.  The message below is encrypted using a shift of 2.  Can you decrypt the message?
 
 `vguv oguucig`
