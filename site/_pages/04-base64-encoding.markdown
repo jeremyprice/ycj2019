@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "Base64 Encoding"
-permalink: /base64
+permalink: /base64.html
 ---
 
 This algorithm isn't technically an encryption/decryption algorithm, but it does allow us to encode information so it can be more easily encrypted.  Base64 encoding is a technique we can use to turn a stream of arbitrary data (not just letters) into letters and numbers.  Sometimes we need to do this in order to send the information without it getting lost or misinterpreted.  It can also be used as a first step to encode our information before we encrypt it.

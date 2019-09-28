@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "Substitution Cipher"
-permalink: /substitution
+permalink: /substitution.html
 ---
 
 Now that you know the shift cipher, let's talk about it's family.  The shift cipher is one form of a substitution cipher.  In a basic substitution cipher we substitute on letter for another letter.  In the shift cipher, we create the key by shifting all the letters by a constant amount.  For instance, here is the key for a shift cipher with a distance of 6:

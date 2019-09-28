@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "Cryptography Challenges"
-permalink: /challenges
+permalink: /challenges.html
 ---
 
 ## Congratulations!

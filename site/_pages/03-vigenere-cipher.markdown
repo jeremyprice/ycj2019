@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "Vigenère Cipher"
-permalink: /vigenere
+permalink: /vigenere.html
 ---
 
 We've done some simple shifting and substitutions for our ciphers, now lets add some more complexity.  A simple shift is easy to crack because once you know the shift distance for one of the letters you know the shift distance for all the letters.  What if we varied the shift distance for each letter?  Ciphers like this are called polyalphabetic ciphers because they involve using different keys (alphabets).

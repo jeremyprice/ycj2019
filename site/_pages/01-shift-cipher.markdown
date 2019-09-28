@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "Shift Cipher"
-permalink: /shift
+permalink: /shift.html
 ---
 
 The shift cipher is a very common cipher that is easy to understand, easy to encrypt and decrypt, but provides a basic level of security for your message.  Essentially, a shift cipher requires that we take each letter in our source message and shift it by a specified amount.  This cipher is sometimes referred to as a Caesar Cipher.
