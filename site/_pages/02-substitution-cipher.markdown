@@ -1,8 +1,7 @@
 ---
 layout: single
 title:  "Substitution Cipher"
-date:   2019-09-27 11:00:00 -0500
-categories: cryptography substitution cipher
+permalink: /substitution
 ---
 
 Now that you know the shift cipher, let's talk about it's family.  The shift cipher is one form of a substitution cipher.  In a basic substitution cipher we substitute on letter for another letter.  In the shift cipher, we create the key by shifting all the letters by a constant amount.  For instance, here is the key for a shift cipher with a distance of 6:
@@ -53,6 +52,8 @@ Now it is your turn:
 4. Pass it to the person with you and see if they can understand it.
 
 Keep doing those steps until you feel like you understand the substitution cipher well.
+
+Click the next activity on the left when you are ready to continue.
 
 <script>
 function showHide(elId) {

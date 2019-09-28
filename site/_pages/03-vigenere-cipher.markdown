@@ -1,8 +1,7 @@
 ---
 layout: single
 title:  "Vigenère Cipher"
-date:   2019-09-27 11:00:00 -0500
-categories: cryptography polyalphabetic cipher
+permalink: /vigenere
 ---
 
 We've done some simple shifting and substitutions for our ciphers, now lets add some more complexity.  A simple shift is easy to crack because once you know the shift distance for one of the letters you know the shift distance for all the letters.  What if we varied the shift distance for each letter?  Ciphers like this are called polyalphabetic ciphers because they involve using different keys (alphabets).
@@ -78,6 +77,8 @@ Now it is your turn:
 Keep doing those steps until you feel like you understand the substitution cipher well.
 
 [Click here to learn more about the Vigenère cipher.](https://en.wikipedia.org/wiki/Vigenère_cipher)
+
+Click the next activity on the left when you are ready to continue.
 
 <script>
 function showHide(elId) {

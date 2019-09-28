@@ -1,0 +1,7 @@
+activities:
+  - title: "01: Shift Cipher"
+    url: /shift
+  - title: "02: Substitution Cipher"
+    url: /substitution
+  - title: "03: Vigenère Cipher"
+    url: /vigenere
