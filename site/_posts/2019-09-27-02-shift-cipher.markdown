@@ -21,8 +21,22 @@ Now it is your turn.  The message below is encrypted using a shift of 2.  Can yo
 
 `vguv oguucig`
 
-### todo hide/show the answer
-This is the plaintext message: `test message`.  Did you get it right?
+<button onclick="showHide('plaintext1')">Click here to see the answer</button>
+<div id="plaintext1" style="display: none;
+    box-sizing: border-box;
+    background-color: #000;
+    position: relative;
+    margin-bottom: 1em;
+    background: #263238;
+    color: #eeffff;
+    font-size: 0.75em;
+    line-height: 1.8;
+    border-radius: 4px;
+    padding: 1em;">
+This is the plaintext message:<br>
+<code class="highlighter-rouge">test message</code><br>
+Did you get it right?
+</div>
 
 What happened to the space in that message?  Did our encryption change it at all?  What do you think we should do with other punctuation?  For a shift cipher we ignore any characters that aren't alphabetical (a-z).  Any punctuation or whitespace is copied verbatim from the plaintext message to the ciphertext message.
 Also, each ciphertext character is the same case as the plaintext character.  For instance, a capital letter in plaintext will result in a capital letter in the ciphertext.
@@ -31,18 +45,44 @@ Let's try a negative shift.  A negative shift makes us shift to the left instead
 
 `Ocdn hznnvbz dni'o izbvodqz`
 
-### todo hide/show the answer
-This is the plaintext message: `this message isn't negative`.  Did you get it right?
+<button onclick="showHide('plaintext2')">Click here to see the answer</button>
+<div id="plaintext2" style="display: none;
+    box-sizing: border-box;
+    background-color: #000;
+    position: relative;
+    margin-bottom: 1em;
+    background: #263238;
+    color: #eeffff;
+    font-size: 0.75em;
+    line-height: 1.8;
+    border-radius: 4px;
+    padding: 1em;">
+This is the plaintext message:<br>
+<code class="highlighter-rouge">this message isn't negative</code><br>
+Did you get it right?
+</div>
 
 A handy tool you can use to implement a shift cipher is a code wheel (very similar to a secret decoder ring).  [Here is a cool one that you can use on the internet](http://inventwithpython.com/cipherwheel/){:target="_blank_"}  **Note: it doesn't work in a mobile browser.**
 
 Our work so far has been decrypting messages using the shift cipher, but that's only half the work.  Here are some messages for you to encrypt.  The number in front of each message indicates the shift distance.  Can you figure out what the ciphertext looks like?
-`7`:`Hello World!`
+`7`:`Hello World!`<br>
 `-4`: `Goodbye World?`
 
-### todo hide/show the answers
-`Olssv Dvysk!`
-`Ckkzxua Sknhz?`
+<button onclick="showHide('plaintext3')">Click here to see the answer</button>
+<div id="plaintext3" style="display: none;
+    box-sizing: border-box;
+    background-color: #000;
+    position: relative;
+    margin-bottom: 1em;
+    background: #263238;
+    color: #eeffff;
+    font-size: 0.75em;
+    line-height: 1.8;
+    border-radius: 4px;
+    padding: 1em;">
+<code class="highlighter-rouge">Olssv Dvysk!</code><br>
+<code class="highlighter-rouge">Ckkzxua Sknhz?</code><br>
+</div>
 
 Now it is your turn:
 
@@ -54,3 +94,14 @@ Now it is your turn:
 Keep doing those steps until you feel like you understand the shift cipher well.
 
 [Click here to learn more about shift ciphers.](https://en.wikipedia.org/wiki/Caesar_cipher)
+
+<script>
+function showHide(elId) {
+  var x = document.getElementById(elId);
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>

@@ -174,8 +174,22 @@ Obxiiv fjmloqxkq jbppxdb zlkqxfkba ebobfk
 
 <p><code class="highlighter-rouge">vguv oguucig</code></p>
 
-<h3 id="todo-hideshow-the-answer">todo hide/show the answer</h3>
-<p>This is the plaintext message: <code class="highlighter-rouge">test message</code>.  Did you get it right?</p>
+<p><button onclick="showHide('plaintext1')">Click here to see the answer</button></p>
+<div id="plaintext1" style="display: none;
+    box-sizing: border-box;
+    background-color: #000;
+    position: relative;
+    margin-bottom: 1em;
+    background: #263238;
+    color: #eeffff;
+    font-size: 0.75em;
+    line-height: 1.8;
+    border-radius: 4px;
+    padding: 1em;">
+This is the plaintext message:<br />
+<code class="highlighter-rouge">test message</code><br />
+Did you get it right?
+</div>
 
 <p>What happened to the space in that message?  Did our encryption change it at all?  What do you think we should do with other punctuation?  For a shift cipher we ignore any characters that aren’t alphabetical (a-z).  Any punctuation or whitespace is copied verbatim from the plaintext message to the ciphertext message.
 Also, each ciphertext character is the same case as the plaintext character.  For instance, a capital letter in plaintext will result in a capital letter in the ciphertext.</p>
@@ -184,18 +198,44 @@ Also, each ciphertext character is the same case as the plaintext character.  Fo
 
 <p><code class="highlighter-rouge">Ocdn hznnvbz dni'o izbvodqz</code></p>
 
-<h3 id="todo-hideshow-the-answer-1">todo hide/show the answer</h3>
-<p>This is the plaintext message: <code class="highlighter-rouge">this message isn't negative</code>.  Did you get it right?</p>
+<p><button onclick="showHide('plaintext2')">Click here to see the answer</button></p>
+<div id="plaintext2" style="display: none;
+    box-sizing: border-box;
+    background-color: #000;
+    position: relative;
+    margin-bottom: 1em;
+    background: #263238;
+    color: #eeffff;
+    font-size: 0.75em;
+    line-height: 1.8;
+    border-radius: 4px;
+    padding: 1em;">
+This is the plaintext message:<br />
+<code class="highlighter-rouge">this message isn't negative</code><br />
+Did you get it right?
+</div>
 
 <p>A handy tool you can use to implement a shift cipher is a code wheel (very similar to a secret decoder ring).  <a href="http://inventwithpython.com/cipherwheel/" target="_blank_">Here is a cool one that you can use on the internet</a>  <strong>Note: it doesn’t work in a mobile browser.</strong></p>
 
 <p>Our work so far has been decrypting messages using the shift cipher, but that’s only half the work.  Here are some messages for you to encrypt.  The number in front of each message indicates the shift distance.  Can you figure out what the ciphertext looks like?
-<code class="highlighter-rouge">7</code>:<code class="highlighter-rouge">Hello World!</code>
+<code class="highlighter-rouge">7</code>:<code class="highlighter-rouge">Hello World!</code><br />
 <code class="highlighter-rouge">-4</code>: <code class="highlighter-rouge">Goodbye World?</code></p>
 
-<h3 id="todo-hideshow-the-answers">todo hide/show the answers</h3>
-<p><code class="highlighter-rouge">Olssv Dvysk!</code>
-<code class="highlighter-rouge">Ckkzxua Sknhz?</code></p>
+<p><button onclick="showHide('plaintext3')">Click here to see the answer</button></p>
+<div id="plaintext3" style="display: none;
+    box-sizing: border-box;
+    background-color: #000;
+    position: relative;
+    margin-bottom: 1em;
+    background: #263238;
+    color: #eeffff;
+    font-size: 0.75em;
+    line-height: 1.8;
+    border-radius: 4px;
+    padding: 1em;">
+<code class="highlighter-rouge">Olssv Dvysk!</code><br />
+<code class="highlighter-rouge">Ckkzxua Sknhz?</code><br />
+</div>
 
 <p>Now it is your turn:</p>
 
@@ -209,6 +249,18 @@ Also, each ciphertext character is the same case as the plaintext character.  Fo
 <p>Keep doing those steps until you feel like you understand the shift cipher well.</p>
 
 <p><a href="https://en.wikipedia.org/wiki/Caesar_cipher">Click here to learn more about shift ciphers.</a></p>
+
+<script>
+function showHide(elId) {
+  var x = document.getElementById(elId);
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
 
         
       </section>

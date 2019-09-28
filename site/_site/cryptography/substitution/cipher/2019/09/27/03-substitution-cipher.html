@@ -179,8 +179,22 @@ Or'v rpd advr yql didw!
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Rpqjcv uxw ydgwlsrojt rpov
 </code></pre></div></div>
 
-<h3 id="todo-hideshow-the-answer">todo hide/show the answer</h3>
-<p>This is the plaintext message: <code class="highlighter-rouge">Thanks for decrypting this</code>.  Did you get it right?</p>
+<p><button onclick="showHide('pt1')">Click here to see the answer</button></p>
+<div id="pt1" style="display: none;
+    box-sizing: border-box;
+    background-color: #000;
+    position: relative;
+    margin-bottom: 1em;
+    background: #263238;
+    color: #eeffff;
+    font-size: 0.75em;
+    line-height: 1.8;
+    border-radius: 4px;
+    padding: 1em;">
+This is the plaintext message:<br />
+<code class="highlighter-rouge">Thanks for decrypting this</code><br />
+Did you get it right?
+</div>
 
 <p>Now it is your turn:</p>
 
@@ -192,6 +206,18 @@ Or'v rpd advr yql didw!
 </ol>
 
 <p>Keep doing those steps until you feel like you understand the substitution cipher well.</p>
+
+<script>
+function showHide(elId) {
+  var x = document.getElementById(elId);
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
 
         
       </section>

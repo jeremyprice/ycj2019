@@ -177,8 +177,22 @@ ciphertext: cdspg
 plaintext: I love this cipher!
 </code></pre></div></div>
 
-<h3 id="todo-hideshow-the-answer">todo hide/show the answer</h3>
-<p>This is the ciphertext message: <code class="highlighter-rouge">A nfzx xjzw umryik!</code>.  Did you get it right?</p>
+<p><button onclick="showHide('ct1')">Click here to see the answer</button></p>
+<div id="ct1" style="display: none;
+    box-sizing: border-box;
+    background-color: #000;
+    position: relative;
+    margin-bottom: 1em;
+    background: #263238;
+    color: #eeffff;
+    font-size: 0.75em;
+    line-height: 1.8;
+    border-radius: 4px;
+    padding: 1em;">
+This is the ciphertext message:<br />
+<code class="highlighter-rouge">A nfzx xjzw umryik!</code><br />
+Did you get it right?
+</div>
 
 <p>Notice that unlike the substitution ciphers we worked with, the Vigenère cipher requires us to have a keyword that everyone in our secret club needs to know.  This is referred to as a pre-shared key meaning that we have to share the key before we start sending and receiving messages.</p>
 
@@ -189,8 +203,22 @@ plaintext: I love this cipher!
 ciphertext: G bhwg L moz'h kbp ryc ad nbtg
 </code></pre></div></div>
 
-<h3 id="todo-hideshow-the-answer-1">todo hide/show the answer</h3>
-<p>This is the plaintext message: <code class="highlighter-rouge">I hope I don't run out of time</code>.  Did you get it right?</p>
+<p><button onclick="showHide('pt1')">Click here to see the answer</button></p>
+<div id="pt1" style="display: none;
+    box-sizing: border-box;
+    background-color: #000;
+    position: relative;
+    margin-bottom: 1em;
+    background: #263238;
+    color: #eeffff;
+    font-size: 0.75em;
+    line-height: 1.8;
+    border-radius: 4px;
+    padding: 1em;">
+This is the plaintext message:<br />
+<code class="highlighter-rouge">I hope I don't run out of time</code><br />
+Did you get it right?
+</div>
 
 <p>Now it is your turn:</p>
 
@@ -204,6 +232,18 @@ ciphertext: G bhwg L moz'h kbp ryc ad nbtg
 <p>Keep doing those steps until you feel like you understand the substitution cipher well.</p>
 
 <p><a href="https://en.wikipedia.org/wiki/Vigenère_cipher">Click here to learn more about the Vigenère cipher.</a></p>
+
+<script>
+function showHide(elId) {
+  var x = document.getElementById(elId);
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
 
         
       </section>

@@ -24,8 +24,22 @@ keyword:   secret
 plaintext: I love this cipher!
 ```
 
-### todo hide/show the answer
-This is the ciphertext message: `A nfzx xjzw umryik!`.  Did you get it right?
+<button onclick="showHide('ct1')">Click here to see the answer</button>
+<div id="ct1" style="display: none;
+    box-sizing: border-box;
+    background-color: #000;
+    position: relative;
+    margin-bottom: 1em;
+    background: #263238;
+    color: #eeffff;
+    font-size: 0.75em;
+    line-height: 1.8;
+    border-radius: 4px;
+    padding: 1em;">
+This is the ciphertext message:<br>
+<code class="highlighter-rouge">A nfzx xjzw umryik!</code><br>
+Did you get it right?
+</div>
 
 Notice that unlike the substitution ciphers we worked with, the Vigenère cipher requires us to have a keyword that everyone in our secret club needs to know.  This is referred to as a pre-shared key meaning that we have to share the key before we start sending and receiving messages.
 
@@ -37,8 +51,22 @@ keyword:    youthcodejam
 ciphertext: G bhwg L moz'h kbp ryc ad nbtg
 ```
 
-### todo hide/show the answer
-This is the plaintext message: `I hope I don't run out of time`.  Did you get it right?
+<button onclick="showHide('pt1')">Click here to see the answer</button>
+<div id="pt1" style="display: none;
+    box-sizing: border-box;
+    background-color: #000;
+    position: relative;
+    margin-bottom: 1em;
+    background: #263238;
+    color: #eeffff;
+    font-size: 0.75em;
+    line-height: 1.8;
+    border-radius: 4px;
+    padding: 1em;">
+This is the plaintext message:<br>
+<code class="highlighter-rouge">I hope I don't run out of time</code><br>
+Did you get it right?
+</div>
 
 Now it is your turn:
 
@@ -50,3 +78,14 @@ Now it is your turn:
 Keep doing those steps until you feel like you understand the substitution cipher well.
 
 [Click here to learn more about the Vigenère cipher.](https://en.wikipedia.org/wiki/Vigenère_cipher)
+
+<script>
+function showHide(elId) {
+  var x = document.getElementById(elId);
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>

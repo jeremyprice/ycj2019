@@ -28,8 +28,22 @@ Now it is your turn.  Here is the ciphertext, decrypt it using the key listed ab
 Rpqjcv uxw ydgwlsrojt rpov
 ```
 
-### todo hide/show the answer
-This is the plaintext message: `Thanks for decrypting this`.  Did you get it right?
+<button onclick="showHide('pt1')">Click here to see the answer</button>
+<div id="pt1" style="display: none;
+    box-sizing: border-box;
+    background-color: #000;
+    position: relative;
+    margin-bottom: 1em;
+    background: #263238;
+    color: #eeffff;
+    font-size: 0.75em;
+    line-height: 1.8;
+    border-radius: 4px;
+    padding: 1em;">
+This is the plaintext message:<br>
+<code class="highlighter-rouge">Thanks for decrypting this</code><br>
+Did you get it right?
+</div>
 
 Now it is your turn:
 
@@ -39,3 +53,14 @@ Now it is your turn:
 4. Pass it to the person with you and see if they can understand it.
 
 Keep doing those steps until you feel like you understand the substitution cipher well.
+
+<script>
+function showHide(elId) {
+  var x = document.getElementById(elId);
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://23.253.253.83//ycj/feed.xml" rel="self" type="application/atom+xml" /><link href="http://23.253.253.83//ycj/" rel="alternate" type="text/html" /><updated>2019-09-28T06:56:02-05:00</updated><id>http://23.253.253.83//ycj/feed.xml</id><title type="html">Cryptography and Cybersecurity</title><subtitle>Work through some online activities to learn about cryptography and cybersecurity.  Try out different ciphers, encrypt and decrypt strings, impress your friends and frustrate your enemies!</subtitle><entry><title type="html">Substitution Cipher</title><link href="http://23.253.253.83//ycj/cryptography/substitution/cipher/2019/09/27/03-substitution-cipher.html" rel="alternate" type="text/html" title="Substitution Cipher" /><published>2019-09-27T11:00:00-05:00</published><updated>2019-09-27T11:00:00-05:00</updated><id>http://23.253.253.83//ycj/cryptography/substitution/cipher/2019/09/27/03-substitution-cipher</id><content type="html" xml:base="http://23.253.253.83//ycj/cryptography/substitution/cipher/2019/09/27/03-substitution-cipher.html">&lt;p&gt;Now that you know the shift cipher, let’s talk about it’s family.  The shift cipher is one form of a substitution cipher.  In a basic substitution cipher we substitute on letter for another letter.  In the shift cipher, we create the key by shifting all the letters by a constant amount.  For instance, here is the key for a shift cipher with a distance of 6:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://23.253.253.83//ycj/feed.xml" rel="self" type="application/atom+xml" /><link href="http://23.253.253.83//ycj/" rel="alternate" type="text/html" /><updated>2019-09-28T07:30:30-05:00</updated><id>http://23.253.253.83//ycj/feed.xml</id><title type="html">Cryptography and Cybersecurity</title><subtitle>Work through some online activities to learn about cryptography and cybersecurity.  Try out different ciphers, encrypt and decrypt strings, impress your friends and frustrate your enemies!</subtitle><entry><title type="html">Substitution Cipher</title><link href="http://23.253.253.83//ycj/cryptography/substitution/cipher/2019/09/27/03-substitution-cipher.html" rel="alternate" type="text/html" title="Substitution Cipher" /><published>2019-09-27T11:00:00-05:00</published><updated>2019-09-27T11:00:00-05:00</updated><id>http://23.253.253.83//ycj/cryptography/substitution/cipher/2019/09/27/03-substitution-cipher</id><content type="html" xml:base="http://23.253.253.83//ycj/cryptography/substitution/cipher/2019/09/27/03-substitution-cipher.html">&lt;p&gt;Now that you know the shift cipher, let’s talk about it’s family.  The shift cipher is one form of a substitution cipher.  In a basic substitution cipher we substitute on letter for another letter.  In the shift cipher, we create the key by shifting all the letters by a constant amount.  For instance, here is the key for a shift cipher with a distance of 6:&lt;/p&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;abcdefghijklmnopqrstuvwxyz
 ghijklmnopqrstuvwxyzabcdef
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -17,8 +17,22 @@ Or'v rpd advr yql didw!
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Rpqjcv uxw ydgwlsrojt rpov
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h3 id=&quot;todo-hideshow-the-answer&quot;&gt;todo hide/show the answer&lt;/h3&gt;
-&lt;p&gt;This is the plaintext message: &lt;code class=&quot;highlighter-rouge&quot;&gt;Thanks for decrypting this&lt;/code&gt;.  Did you get it right?&lt;/p&gt;
+&lt;p&gt;&lt;button onclick=&quot;showHide('pt1')&quot;&gt;Click here to see the answer&lt;/button&gt;&lt;/p&gt;
+&lt;div id=&quot;pt1&quot; style=&quot;display: none;
+    box-sizing: border-box;
+    background-color: #000;
+    position: relative;
+    margin-bottom: 1em;
+    background: #263238;
+    color: #eeffff;
+    font-size: 0.75em;
+    line-height: 1.8;
+    border-radius: 4px;
+    padding: 1em;&quot;&gt;
+This is the plaintext message:&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;Thanks for decrypting this&lt;/code&gt;&lt;br /&gt;
+Did you get it right?
+&lt;/div&gt;
 
 &lt;p&gt;Now it is your turn:&lt;/p&gt;
 
@@ -29,7 +43,18 @@ Or'v rpd advr yql didw!
   &lt;li&gt;Pass it to the person with you and see if they can understand it.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;Keep doing those steps until you feel like you understand the substitution cipher well.&lt;/p&gt;</content><author><name></name></author><summary type="html">Now that you know the shift cipher, let’s talk about it’s family. The shift cipher is one form of a substitution cipher. In a basic substitution cipher we substitute on letter for another letter. In the shift cipher, we create the key by shifting all the letters by a constant amount. For instance, here is the key for a shift cipher with a distance of 6: abcdefghijklmnopqrstuvwxyz ghijklmnopqrstuvwxyzabcdef</summary></entry><entry><title type="html">Vigenère Cipher</title><link href="http://23.253.253.83//ycj/cryptography/polyalphabetic/cipher/2019/09/27/04-vigenere-cipher.html" rel="alternate" type="text/html" title="Vigenère Cipher" /><published>2019-09-27T11:00:00-05:00</published><updated>2019-09-27T11:00:00-05:00</updated><id>http://23.253.253.83//ycj/cryptography/polyalphabetic/cipher/2019/09/27/04-vigenere-cipher</id><content type="html" xml:base="http://23.253.253.83//ycj/cryptography/polyalphabetic/cipher/2019/09/27/04-vigenere-cipher.html">&lt;p&gt;We’ve done some simple shifting and substitutions for our ciphers, now lets add some more complexity.  A simple shift is easy to crack because once you know the shift distance for one of the letters you know the shift distance for all the letters.  What if we varied the shift distance for each letter?  Ciphers like this are called polyalphabetic ciphers because they involve using different keys (alphabets).&lt;/p&gt;
+&lt;p&gt;Keep doing those steps until you feel like you understand the substitution cipher well.&lt;/p&gt;
+
+&lt;script&gt;
+function showHide(elId) {
+  var x = document.getElementById(elId);
+  if (x.style.display === &quot;none&quot;) {
+    x.style.display = &quot;block&quot;;
+  } else {
+    x.style.display = &quot;none&quot;;
+  }
+}
+&lt;/script&gt;</content><author><name></name></author><summary type="html">Now that you know the shift cipher, let’s talk about it’s family. The shift cipher is one form of a substitution cipher. In a basic substitution cipher we substitute on letter for another letter. In the shift cipher, we create the key by shifting all the letters by a constant amount. For instance, here is the key for a shift cipher with a distance of 6: abcdefghijklmnopqrstuvwxyz ghijklmnopqrstuvwxyzabcdef</summary></entry><entry><title type="html">Vigenère Cipher</title><link href="http://23.253.253.83//ycj/cryptography/polyalphabetic/cipher/2019/09/27/04-vigenere-cipher.html" rel="alternate" type="text/html" title="Vigenère Cipher" /><published>2019-09-27T11:00:00-05:00</published><updated>2019-09-27T11:00:00-05:00</updated><id>http://23.253.253.83//ycj/cryptography/polyalphabetic/cipher/2019/09/27/04-vigenere-cipher</id><content type="html" xml:base="http://23.253.253.83//ycj/cryptography/polyalphabetic/cipher/2019/09/27/04-vigenere-cipher.html">&lt;p&gt;We’ve done some simple shifting and substitutions for our ciphers, now lets add some more complexity.  A simple shift is easy to crack because once you know the shift distance for one of the letters you know the shift distance for all the letters.  What if we varied the shift distance for each letter?  Ciphers like this are called polyalphabetic ciphers because they involve using different keys (alphabets).&lt;/p&gt;
 
 &lt;p&gt;The polyalphabetic cipher we are going to learn about is the Vigenère cipher.  This cipher uses the Caesar cipher, but instead of one shift for all the characters it uses a different shift for each character.  The image below shows a Vigenère square and illustrates how each letter can be encoded using a different shift distance.&lt;/p&gt;
 
@@ -46,8 +71,22 @@ ciphertext: cdspg
 plaintext: I love this cipher!
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h3 id=&quot;todo-hideshow-the-answer&quot;&gt;todo hide/show the answer&lt;/h3&gt;
-&lt;p&gt;This is the ciphertext message: &lt;code class=&quot;highlighter-rouge&quot;&gt;A nfzx xjzw umryik!&lt;/code&gt;.  Did you get it right?&lt;/p&gt;
+&lt;p&gt;&lt;button onclick=&quot;showHide('ct1')&quot;&gt;Click here to see the answer&lt;/button&gt;&lt;/p&gt;
+&lt;div id=&quot;ct1&quot; style=&quot;display: none;
+    box-sizing: border-box;
+    background-color: #000;
+    position: relative;
+    margin-bottom: 1em;
+    background: #263238;
+    color: #eeffff;
+    font-size: 0.75em;
+    line-height: 1.8;
+    border-radius: 4px;
+    padding: 1em;&quot;&gt;
+This is the ciphertext message:&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;A nfzx xjzw umryik!&lt;/code&gt;&lt;br /&gt;
+Did you get it right?
+&lt;/div&gt;
 
 &lt;p&gt;Notice that unlike the substitution ciphers we worked with, the Vigenère cipher requires us to have a keyword that everyone in our secret club needs to know.  This is referred to as a pre-shared key meaning that we have to share the key before we start sending and receiving messages.&lt;/p&gt;
 
@@ -58,8 +97,22 @@ plaintext: I love this cipher!
 ciphertext: G bhwg L moz'h kbp ryc ad nbtg
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h3 id=&quot;todo-hideshow-the-answer-1&quot;&gt;todo hide/show the answer&lt;/h3&gt;
-&lt;p&gt;This is the plaintext message: &lt;code class=&quot;highlighter-rouge&quot;&gt;I hope I don't run out of time&lt;/code&gt;.  Did you get it right?&lt;/p&gt;
+&lt;p&gt;&lt;button onclick=&quot;showHide('pt1')&quot;&gt;Click here to see the answer&lt;/button&gt;&lt;/p&gt;
+&lt;div id=&quot;pt1&quot; style=&quot;display: none;
+    box-sizing: border-box;
+    background-color: #000;
+    position: relative;
+    margin-bottom: 1em;
+    background: #263238;
+    color: #eeffff;
+    font-size: 0.75em;
+    line-height: 1.8;
+    border-radius: 4px;
+    padding: 1em;&quot;&gt;
+This is the plaintext message:&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;I hope I don't run out of time&lt;/code&gt;&lt;br /&gt;
+Did you get it right?
+&lt;/div&gt;
 
 &lt;p&gt;Now it is your turn:&lt;/p&gt;
 
@@ -72,7 +125,18 @@ ciphertext: G bhwg L moz'h kbp ryc ad nbtg
 
 &lt;p&gt;Keep doing those steps until you feel like you understand the substitution cipher well.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Vigenère_cipher&quot;&gt;Click here to learn more about the Vigenère cipher.&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">We’ve done some simple shifting and substitutions for our ciphers, now lets add some more complexity. A simple shift is easy to crack because once you know the shift distance for one of the letters you know the shift distance for all the letters. What if we varied the shift distance for each letter? Ciphers like this are called polyalphabetic ciphers because they involve using different keys (alphabets).</summary></entry><entry><title type="html">Shift Cipher</title><link href="http://23.253.253.83//ycj/cryptography/shift/cipher/2019/09/27/02-shift-cipher.html" rel="alternate" type="text/html" title="Shift Cipher" /><published>2019-09-27T10:00:00-05:00</published><updated>2019-09-27T10:00:00-05:00</updated><id>http://23.253.253.83//ycj/cryptography/shift/cipher/2019/09/27/02-shift-cipher</id><content type="html" xml:base="http://23.253.253.83//ycj/cryptography/shift/cipher/2019/09/27/02-shift-cipher.html">&lt;p&gt;The shift cipher is a very common cipher that is easy to understand, easy to encrypt and decrypt, but provides a basic level of security for your message.  Essentially, a shift cipher requires that we take each letter in our source message and shift it by a specified amount.  This cipher is sometimes referred to as a Caesar Cipher.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Vigenère_cipher&quot;&gt;Click here to learn more about the Vigenère cipher.&lt;/a&gt;&lt;/p&gt;
+
+&lt;script&gt;
+function showHide(elId) {
+  var x = document.getElementById(elId);
+  if (x.style.display === &quot;none&quot;) {
+    x.style.display = &quot;block&quot;;
+  } else {
+    x.style.display = &quot;none&quot;;
+  }
+}
+&lt;/script&gt;</content><author><name></name></author><summary type="html">We’ve done some simple shifting and substitutions for our ciphers, now lets add some more complexity. A simple shift is easy to crack because once you know the shift distance for one of the letters you know the shift distance for all the letters. What if we varied the shift distance for each letter? Ciphers like this are called polyalphabetic ciphers because they involve using different keys (alphabets).</summary></entry><entry><title type="html">Shift Cipher</title><link href="http://23.253.253.83//ycj/cryptography/shift/cipher/2019/09/27/02-shift-cipher.html" rel="alternate" type="text/html" title="Shift Cipher" /><published>2019-09-27T10:00:00-05:00</published><updated>2019-09-27T10:00:00-05:00</updated><id>http://23.253.253.83//ycj/cryptography/shift/cipher/2019/09/27/02-shift-cipher</id><content type="html" xml:base="http://23.253.253.83//ycj/cryptography/shift/cipher/2019/09/27/02-shift-cipher.html">&lt;p&gt;The shift cipher is a very common cipher that is easy to understand, easy to encrypt and decrypt, but provides a basic level of security for your message.  Essentially, a shift cipher requires that we take each letter in our source message and shift it by a specified amount.  This cipher is sometimes referred to as a Caesar Cipher.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/ycj/images/Caesar_cipher_left_shift_of_3.svg&quot; alt=&quot;example shift cipher&quot; /&gt;
 Here is an example of the shift cipher.  For this example, we chose a left shift of 3 for each letter (often represented as a distance of &lt;code class=&quot;highlighter-rouge&quot;&gt;-3&lt;/code&gt;).  Thus, each occurrence of the letter &lt;code class=&quot;highlighter-rouge&quot;&gt;E&lt;/code&gt; in the plaintext message becomes the letter &lt;code class=&quot;highlighter-rouge&quot;&gt;B&lt;/code&gt; in the ciphertext message.&lt;/p&gt;
@@ -86,8 +150,22 @@ Obxiiv fjmloqxkq jbppxdb zlkqxfkba ebobfk
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;vguv oguucig&lt;/code&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;todo-hideshow-the-answer&quot;&gt;todo hide/show the answer&lt;/h3&gt;
-&lt;p&gt;This is the plaintext message: &lt;code class=&quot;highlighter-rouge&quot;&gt;test message&lt;/code&gt;.  Did you get it right?&lt;/p&gt;
+&lt;p&gt;&lt;button onclick=&quot;showHide('plaintext1')&quot;&gt;Click here to see the answer&lt;/button&gt;&lt;/p&gt;
+&lt;div id=&quot;plaintext1&quot; style=&quot;display: none;
+    box-sizing: border-box;
+    background-color: #000;
+    position: relative;
+    margin-bottom: 1em;
+    background: #263238;
+    color: #eeffff;
+    font-size: 0.75em;
+    line-height: 1.8;
+    border-radius: 4px;
+    padding: 1em;&quot;&gt;
+This is the plaintext message:&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;test message&lt;/code&gt;&lt;br /&gt;
+Did you get it right?
+&lt;/div&gt;
 
 &lt;p&gt;What happened to the space in that message?  Did our encryption change it at all?  What do you think we should do with other punctuation?  For a shift cipher we ignore any characters that aren’t alphabetical (a-z).  Any punctuation or whitespace is copied verbatim from the plaintext message to the ciphertext message.
 Also, each ciphertext character is the same case as the plaintext character.  For instance, a capital letter in plaintext will result in a capital letter in the ciphertext.&lt;/p&gt;
@@ -96,18 +174,44 @@ Also, each ciphertext character is the same case as the plaintext character.  Fo
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Ocdn hznnvbz dni'o izbvodqz&lt;/code&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;todo-hideshow-the-answer-1&quot;&gt;todo hide/show the answer&lt;/h3&gt;
-&lt;p&gt;This is the plaintext message: &lt;code class=&quot;highlighter-rouge&quot;&gt;this message isn't negative&lt;/code&gt;.  Did you get it right?&lt;/p&gt;
+&lt;p&gt;&lt;button onclick=&quot;showHide('plaintext2')&quot;&gt;Click here to see the answer&lt;/button&gt;&lt;/p&gt;
+&lt;div id=&quot;plaintext2&quot; style=&quot;display: none;
+    box-sizing: border-box;
+    background-color: #000;
+    position: relative;
+    margin-bottom: 1em;
+    background: #263238;
+    color: #eeffff;
+    font-size: 0.75em;
+    line-height: 1.8;
+    border-radius: 4px;
+    padding: 1em;&quot;&gt;
+This is the plaintext message:&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;this message isn't negative&lt;/code&gt;&lt;br /&gt;
+Did you get it right?
+&lt;/div&gt;
 
 &lt;p&gt;A handy tool you can use to implement a shift cipher is a code wheel (very similar to a secret decoder ring).  &lt;a href=&quot;http://inventwithpython.com/cipherwheel/&quot; target=&quot;_blank_&quot;&gt;Here is a cool one that you can use on the internet&lt;/a&gt;  &lt;strong&gt;Note: it doesn’t work in a mobile browser.&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Our work so far has been decrypting messages using the shift cipher, but that’s only half the work.  Here are some messages for you to encrypt.  The number in front of each message indicates the shift distance.  Can you figure out what the ciphertext looks like?
-&lt;code class=&quot;highlighter-rouge&quot;&gt;7&lt;/code&gt;:&lt;code class=&quot;highlighter-rouge&quot;&gt;Hello World!&lt;/code&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;7&lt;/code&gt;:&lt;code class=&quot;highlighter-rouge&quot;&gt;Hello World!&lt;/code&gt;&lt;br /&gt;
 &lt;code class=&quot;highlighter-rouge&quot;&gt;-4&lt;/code&gt;: &lt;code class=&quot;highlighter-rouge&quot;&gt;Goodbye World?&lt;/code&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;todo-hideshow-the-answers&quot;&gt;todo hide/show the answers&lt;/h3&gt;
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Olssv Dvysk!&lt;/code&gt;
-&lt;code class=&quot;highlighter-rouge&quot;&gt;Ckkzxua Sknhz?&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;button onclick=&quot;showHide('plaintext3')&quot;&gt;Click here to see the answer&lt;/button&gt;&lt;/p&gt;
+&lt;div id=&quot;plaintext3&quot; style=&quot;display: none;
+    box-sizing: border-box;
+    background-color: #000;
+    position: relative;
+    margin-bottom: 1em;
+    background: #263238;
+    color: #eeffff;
+    font-size: 0.75em;
+    line-height: 1.8;
+    border-radius: 4px;
+    padding: 1em;&quot;&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;Olssv Dvysk!&lt;/code&gt;&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;Ckkzxua Sknhz?&lt;/code&gt;&lt;br /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Now it is your turn:&lt;/p&gt;
 
@@ -120,7 +224,18 @@ Also, each ciphertext character is the same case as the plaintext character.  Fo
 
 &lt;p&gt;Keep doing those steps until you feel like you understand the shift cipher well.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Caesar_cipher&quot;&gt;Click here to learn more about shift ciphers.&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">The shift cipher is a very common cipher that is easy to understand, easy to encrypt and decrypt, but provides a basic level of security for your message. Essentially, a shift cipher requires that we take each letter in our source message and shift it by a specified amount. This cipher is sometimes referred to as a Caesar Cipher.</summary></entry><entry><title type="html">Introduction to Cryptography and Cybersecurity</title><link href="http://23.253.253.83//ycj/cryptography/introduction/2019/09/27/01-cac-intro.html" rel="alternate" type="text/html" title="Introduction to Cryptography and Cybersecurity" /><published>2019-09-27T09:00:00-05:00</published><updated>2019-09-27T09:00:00-05:00</updated><id>http://23.253.253.83//ycj/cryptography/introduction/2019/09/27/01-cac-intro</id><content type="html" xml:base="http://23.253.253.83//ycj/cryptography/introduction/2019/09/27/01-cac-intro.html">&lt;p&gt;Welcome to the wonderful world of cryptography and cybersecurity!&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Caesar_cipher&quot;&gt;Click here to learn more about shift ciphers.&lt;/a&gt;&lt;/p&gt;
+
+&lt;script&gt;
+function showHide(elId) {
+  var x = document.getElementById(elId);
+  if (x.style.display === &quot;none&quot;) {
+    x.style.display = &quot;block&quot;;
+  } else {
+    x.style.display = &quot;none&quot;;
+  }
+}
+&lt;/script&gt;</content><author><name></name></author><summary type="html">The shift cipher is a very common cipher that is easy to understand, easy to encrypt and decrypt, but provides a basic level of security for your message. Essentially, a shift cipher requires that we take each letter in our source message and shift it by a specified amount. This cipher is sometimes referred to as a Caesar Cipher.</summary></entry><entry><title type="html">Introduction to Cryptography and Cybersecurity</title><link href="http://23.253.253.83//ycj/cryptography/introduction/2019/09/27/01-cac-intro.html" rel="alternate" type="text/html" title="Introduction to Cryptography and Cybersecurity" /><published>2019-09-27T09:00:00-05:00</published><updated>2019-09-27T09:00:00-05:00</updated><id>http://23.253.253.83//ycj/cryptography/introduction/2019/09/27/01-cac-intro</id><content type="html" xml:base="http://23.253.253.83//ycj/cryptography/introduction/2019/09/27/01-cac-intro.html">&lt;p&gt;Welcome to the wonderful world of cryptography and cybersecurity!&lt;/p&gt;
 
 &lt;p&gt;In the activities on this website you will learn about cryptography, ciphers, and other great tools we use in cybersecurity.&lt;/p&gt;
 
