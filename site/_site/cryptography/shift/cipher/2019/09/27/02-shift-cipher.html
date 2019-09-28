@@ -1,0 +1,285 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.16.6 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Shift Cipher - Cryptography and Cybersecurity</title>
+<meta name="description" content="The shift cipher is a very common cipher that is easy to understand, easy to encrypt and decrypt, but provides a basic level of security for your message.  Essentially, a shift cipher requires that we take each letter in our source message and shift it by a specified amount.  This cyper is sometimes referred to as a Caesar Cipher.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Cryptography and Cybersecurity">
+<meta property="og:title" content="Shift Cipher">
+<meta property="og:url" content="http://localhost:4000/ycj/cryptography/shift/cipher/2019/09/27/02-shift-cipher.html">
+
+
+  <meta property="og:description" content="The shift cipher is a very common cipher that is easy to understand, easy to encrypt and decrypt, but provides a basic level of security for your message.  Essentially, a shift cipher requires that we take each letter in our source message and shift it by a specified amount.  This cyper is sometimes referred to as a Caesar Cipher.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2019-09-27T10:00:00-05:00">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/ycj/cryptography/shift/cipher/2019/09/27/02-shift-cipher.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000/ycj/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/ycj/feed.xml" type="application/atom+xml" rel="alternate" title="Cryptography and Cybersecurity Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/ycj/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/ycj/">
+          Cryptography and Cybersecurity
+          
+        </a>
+        <ul class="visible-links"></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Shift Cipher">
+    <meta itemprop="description" content="The shift cipher is a very common cipher that is easy to understand, easy to encrypt and decrypt, but provides a basic level of security for your message.  Essentially, a shift cipher requires that we take each letter in our source message and shift it by a specified amount.  This cyper is sometimes referred to as a Caesar Cipher.">
+    <meta itemprop="datePublished" content="September 27, 2019">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Shift Cipher
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>The shift cipher is a very common cipher that is easy to understand, easy to encrypt and decrypt, but provides a basic level of security for your message.  Essentially, a shift cipher requires that we take each letter in our source message and shift it by a specified amount.  This cyper is sometimes referred to as a Caesar Cipher.</p>
+
+<p><img src="/images/Caesar_cipher_left_shift_of_3.svg" alt="example shift cipher" />
+Here is an example of the shift cipher.  For this example, we chose a left shift of 3 for each letter (often represented as a distance of <code class="highlighter-rouge">-3</code>).  Thus, each occurrence of the letter <code class="highlighter-rouge">E</code> in the plaintext message becomes the letter <code class="highlighter-rouge">B</code> in the ciphertext message.</p>
+
+<p>If we encrypt a message using the left shift of 3 example you see above it would look something like this:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Really important message contained herein
+Obxiiv fjmloqxkq jbppxdb zlkqxfkba ebobfk
+</code></pre></div></div>
+
+<p>Now it is your turn.  The message below is encrypted using a shift of 2.  Can you decrypt the message?</p>
+
+<p><code class="highlighter-rouge">vguv oguucig</code></p>
+
+<h3 id="todo-hideshow-the-answer">todo hide/show the answer</h3>
+<p>This is the plaintext message: <code class="highlighter-rouge">test message</code>.  Did you get it right?</p>
+
+<p>What happened to the space in that message?  Did our encryption change it at all?  What do you think we should do with other punctuation?  For a shift cipher we ignore any characters that aren’t alphabetical (a-z).  Any punctuation or whitespace is copied verbatim from the plaintext message to the ciphertext message.
+Also, each ciphertext character is the same case as the plaintext character.  For instance, a capital letter in plaintext will result in a capital letter in the ciphertext.</p>
+
+<p>Let’s try a negative shift.  A negative shift makes us shift to the left instead of to the right.  The following message has a shift distance of <code class="highlighter-rouge">-5</code>.  Can you decode the message?</p>
+
+<p><code class="highlighter-rouge">Ocdn hznnvbz dni'o izbvodqz</code></p>
+
+<h3 id="todo-hideshow-the-answer-1">todo hide/show the answer</h3>
+<p>This is the plaintext message: <code class="highlighter-rouge">this message isn't negative</code>.  Did you get it right?</p>
+
+<p>A handy tool you can use to implement a shift cipher is a code wheel (very similar to a secret decoder ring).  <a href="http://inventwithpython.com/cipherwheel/" target="_blank_">Here is a cool one that you can use on the internet</a>  <strong>Note: it doesn’t work in a mobile browser.</strong></p>
+
+<p>Our work so far has been decrypting messages using the shift cipher, but that’s only half the work.  Here are some messages for you to encrypt.  The number in front of each message indicates the shift distance.  Can you figure out what the ciphertext looks like?
+<code class="highlighter-rouge">7</code>:<code class="highlighter-rouge">Hello World!</code>
+<code class="highlighter-rouge">-4</code>: <code class="highlighter-rouge">Goodbye World?</code></p>
+
+<h3 id="todo-hideshow-the-answers">todo hide/show the answers</h3>
+<p><code class="highlighter-rouge">Olssv Dvysk!</code>
+<code class="highlighter-rouge">Ckkzxua Sknhz?</code></p>
+
+<p>Now it is your turn:</p>
+
+<ol>
+  <li>Write a message that you want to encrypt.</li>
+  <li>Choose a shift distance you would like to use.</li>
+  <li>Encrypt your message.</li>
+  <li>Pass it to the person with you and see if they can understand it.</li>
+</ol>
+
+<p>Keep doing those steps until you feel like you understand the shift cipher well.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-09-27T10:00:00-05:00">September 27, 2019</time></p>
+        
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/ycj/cryptography/introduction/2019/09/27/01-cac-intro.html" class="pagination--pager" title="Introduction to Cryptography and Cybersecurity
+">Previous</a>
+    
+    
+      <a href="/ycj/cryptography/substitution/cipher/2019/09/27/03-substitution-cipher.html" class="pagination--pager" title="Substitution Cipher
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+
+    <li><a href="/ycj/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 Cryptography and Cybersecurity. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/ycj/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

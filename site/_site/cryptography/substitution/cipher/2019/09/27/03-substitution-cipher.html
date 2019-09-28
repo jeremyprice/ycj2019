@@ -1,0 +1,269 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.16.6 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Substitution Cipher - Cryptography and Cybersecurity</title>
+<meta name="description" content="Now that you know the shift cipher, let’s talk about it’s family.  The shift cipher is one form of a substitution cipher.  In a basic substitution cipher we substitute on letter for another letter.  In the shift cipher, we create the key by shifting all the letters by a constant amount.  For instance, here is the key for a shift cipher with a distance of 6:abcdefghijklmnopqrstuvwxyzghijklmnopqrstuvwxyzabcdef">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Cryptography and Cybersecurity">
+<meta property="og:title" content="Substitution Cipher">
+<meta property="og:url" content="http://localhost:4000/ycj/cryptography/substitution/cipher/2019/09/27/03-substitution-cipher.html">
+
+
+  <meta property="og:description" content="Now that you know the shift cipher, let’s talk about it’s family.  The shift cipher is one form of a substitution cipher.  In a basic substitution cipher we substitute on letter for another letter.  In the shift cipher, we create the key by shifting all the letters by a constant amount.  For instance, here is the key for a shift cipher with a distance of 6:abcdefghijklmnopqrstuvwxyzghijklmnopqrstuvwxyzabcdef">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2019-09-27T11:00:00-05:00">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/ycj/cryptography/substitution/cipher/2019/09/27/03-substitution-cipher.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000/ycj/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/ycj/feed.xml" type="application/atom+xml" rel="alternate" title="Cryptography and Cybersecurity Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/ycj/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/ycj/">
+          Cryptography and Cybersecurity
+          
+        </a>
+        <ul class="visible-links"></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Substitution Cipher">
+    <meta itemprop="description" content="Now that you know the shift cipher, let’s talk about it’s family.  The shift cipher is one form of a substitution cipher.  In a basic substitution cipher we substitute on letter for another letter.  In the shift cipher, we create the key by shifting all the letters by a constant amount.  For instance, here is the key for a shift cipher with a distance of 6:abcdefghijklmnopqrstuvwxyzghijklmnopqrstuvwxyzabcdef">
+    <meta itemprop="datePublished" content="September 27, 2019">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Substitution Cipher
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>Now that you know the shift cipher, let’s talk about it’s family.  The shift cipher is one form of a substitution cipher.  In a basic substitution cipher we substitute on letter for another letter.  In the shift cipher, we create the key by shifting all the letters by a constant amount.  For instance, here is the key for a shift cipher with a distance of 6:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>abcdefghijklmnopqrstuvwxyz
+ghijklmnopqrstuvwxyzabcdef
+</code></pre></div></div>
+
+<p>With a shift cipher it is easy to break the encryption if you figure out a few letters because you can see the pattern that they are shifted by a constant value.  To make our encryption a little stronger we can implement a more generic substitution cipher.  Instead of shifting by a constant amount we could choose a key where each letter corresponded to a random ciphertext letter.  For instance, let’s use this key to encrypt our message:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>abcdefghijklmnopqrstuvwxyz
+qagydutpohckbjxsmwvrfizeln
+</code></pre></div></div>
+
+<p>Here is what our plaintext and ciphertext would look like:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>It's the best day ever!
+Or'v rpd advr yql didw!
+</code></pre></div></div>
+
+<p>Now it is your turn.  Here is the ciphertext, decrypt it using the key listed above.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Rpqjcv uxw ydgwlsrojt rpov
+</code></pre></div></div>
+
+<h3 id="todo-hideshow-the-answer">todo hide/show the answer</h3>
+<p>This is the plaintext message: <code class="highlighter-rouge">Thanks for decrypting this</code>.  Did you get it right?</p>
+
+<p>Now it is your turn:</p>
+
+<ol>
+  <li>Write a message that you want to encrypt.</li>
+  <li>Create a key you would like to use.  <strong>Make sure each letter is used only once!</strong></li>
+  <li>Encrypt your message.</li>
+  <li>Pass it to the person with you and see if they can understand it.</li>
+</ol>
+
+<p>Keep doing those steps until you feel like you understand the substitution cipher well.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-09-27T11:00:00-05:00">September 27, 2019</time></p>
+        
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/ycj/cryptography/shift/cipher/2019/09/27/02-shift-cipher.html" class="pagination--pager" title="Shift Cipher
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+
+    <li><a href="/ycj/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 Cryptography and Cybersecurity. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/ycj/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

@@ -23,8 +23,8 @@ email: jeremy.price@rackspace.com
 description: >- # this means to ignore newlines until "baseurl:"
   Work through some online activities to learn about cryptography and cybersecurity.  Try out
   different ciphers, encrypt and decrypt strings, impress your friends and frustrate your enemies!
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/ycj" # the subpath of your site, e.g. /blog
+url: "http://23.253.253.83/" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 theme: minimal-mistakes-jekyll
