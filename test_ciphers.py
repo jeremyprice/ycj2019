@@ -140,6 +140,21 @@ class TestVigenereCipher(unittest.TestCase):
         plaintext = v.decrypt(ciphertext, keyword)
         self.assertEqual(plaintext, expected)
 
+    def test_punc_white_encrypt(self):
+        v = ciphers.vigenere()
+        expected = 'Zincs Ostch!'
+        plaintext = 'Hello World!'
+        keyword = 'secret'
+        ciphertext = v.encrypt(plaintext, keyword)
+        self.assertEqual(ciphertext, expected)
+
+    def test_punc_white_decrypt(self):
+        v = ciphers.vigenere()
+        ciphertext = 'Zincs Ostch!'
+        expected = 'Hello World!'
+        keyword = 'secret'
+        plaintext = v.decrypt(ciphertext, keyword)
+        self.assertEqual(plaintext, expected)
 
 if __name__ == '__main__':
     unittest.main()

@@ -5,10 +5,10 @@ date:   2019-09-27 10:00:00 -0500
 categories: cryptography shift cipher
 ---
 
-The shift cipher is a very common cipher that is easy to understand, easy to encrypt and decrypt, but provides a basic level of security for your message.  Essentially, a shift cipher requires that we take each letter in our source message and shift it by a specified amount.  This cyper is sometimes referred to as a Caesar Cipher.
+The shift cipher is a very common cipher that is easy to understand, easy to encrypt and decrypt, but provides a basic level of security for your message.  Essentially, a shift cipher requires that we take each letter in our source message and shift it by a specified amount.  This cipher is sometimes referred to as a Caesar Cipher.
 
 
-![example shift cipher](/images/Caesar_cipher_left_shift_of_3.svg)
+![example shift cipher](/ycj/images/Caesar_cipher_left_shift_of_3.svg)
 Here is an example of the shift cipher.  For this example, we chose a left shift of 3 for each letter (often represented as a distance of `-3`).  Thus, each occurrence of the letter `E` in the plaintext message becomes the letter `B` in the ciphertext message.
 
 If we encrypt a message using the left shift of 3 example you see above it would look something like this:

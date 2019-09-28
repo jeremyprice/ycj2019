@@ -39,6 +39,12 @@ plain = "Thanks for decrypting this"
 subs = ciphers.substitution()
 print('Substitution: {} | {}'.format(plain, subs.encrypt(plain, key)))
 
+keyword = 'secret'
+plain = 'I love this cipher!'
 v = ciphers.vigenere()
-print('{} | {}'.format('abcdefghi', v._rotate('abcdefghi', 3)))
-print('{} | {}'.format('abcdefghi', v._rotate('abcdefghi', -3)))
+print('Vigenère: {} | {}'.format(plain, v.encrypt(plain, keyword)))
+
+keyword = 'youthcodejam'
+plain = "I hope I don't run out of time"
+v = ciphers.vigenere()
+print('Vigenère: {} | {}'.format(plain, v.encrypt(plain, keyword)))

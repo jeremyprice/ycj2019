@@ -1,0 +1,281 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.16.6 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Vigenère Cipher - Cryptography and Cybersecurity</title>
+<meta name="description" content="We’ve done some simple shifting and substitutions for our ciphers, now lets add some more complexity.  A simple shift is easy to crack because once you know the shift distance for one of the letters you know the shift distance for all the letters.  What if we varied the shift distance for each letter?  Ciphers like this are called polyalphabetic ciphers because they involve using different keys (alphabets).">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Cryptography and Cybersecurity">
+<meta property="og:title" content="Vigenère Cipher">
+<meta property="og:url" content="http://23.253.253.83//ycj/cryptography/polyalphabetic/cipher/2019/09/27/04-vigenere-cipher.html">
+
+
+  <meta property="og:description" content="We’ve done some simple shifting and substitutions for our ciphers, now lets add some more complexity.  A simple shift is easy to crack because once you know the shift distance for one of the letters you know the shift distance for all the letters.  What if we varied the shift distance for each letter?  Ciphers like this are called polyalphabetic ciphers because they involve using different keys (alphabets).">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2019-09-27T11:00:00-05:00">
+
+
+
+
+
+
+<link rel="canonical" href="http://23.253.253.83//ycj/cryptography/polyalphabetic/cipher/2019/09/27/04-vigenere-cipher.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "http://23.253.253.83//ycj/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/ycj/feed.xml" type="application/atom+xml" rel="alternate" title="Cryptography and Cybersecurity Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/ycj/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/ycj/">
+          Cryptography and Cybersecurity
+          
+        </a>
+        <ul class="visible-links"></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Vigenère Cipher">
+    <meta itemprop="description" content="We’ve done some simple shifting and substitutions for our ciphers, now lets add some more complexity.  A simple shift is easy to crack because once you know the shift distance for one of the letters you know the shift distance for all the letters.  What if we varied the shift distance for each letter?  Ciphers like this are called polyalphabetic ciphers because they involve using different keys (alphabets).">
+    <meta itemprop="datePublished" content="September 27, 2019">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Vigenère Cipher
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>We’ve done some simple shifting and substitutions for our ciphers, now lets add some more complexity.  A simple shift is easy to crack because once you know the shift distance for one of the letters you know the shift distance for all the letters.  What if we varied the shift distance for each letter?  Ciphers like this are called polyalphabetic ciphers because they involve using different keys (alphabets).</p>
+
+<p>The polyalphabetic cipher we are going to learn about is the Vigenère cipher.  This cipher uses the Caesar cipher, but instead of one shift for all the characters it uses a different shift for each character.  The image below shows a Vigenère square and illustrates how each letter can be encoded using a different shift distance.</p>
+
+<p><img src="/ycj/images/Vigenere_square_shading.svg" alt="Vigenère square" /></p>
+
+<p>To use a Vigenère as our cipher we need one more piece: a keyword.  The way we choose which Caesar cipher to use for each letter is goverend by a keyword or phrase.  As an example, let’s choose the keyword <code class="highlighter-rouge">code</code> to encode our message <code class="highlighter-rouge">apple</code>.  We use the <code class="highlighter-rouge">code</code> keyword by looking in the Vigenère square at the row <code class="highlighter-rouge">c</code> for the cipher for the first letter in our plaintext <code class="highlighter-rouge">a</code>.  We find the column that corresponds to the plaintext <code class="highlighter-rouge">a</code> and go down the rows until we get to the keyword letter <code class="highlighter-rouge">c</code>.  That gives us our ciphertext <code class="highlighter-rouge">c</code>.  What do we do if our plaintext is longer than our keyword?  We just repeat the keyword as many times as necessary.  Here is the full example (note that we repeated our keyword):</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>keyword:    codec
+plaintext:  apple
+ciphertext: cdspg
+</code></pre></div></div>
+
+<p>Now it is your turn to try it.  Encode the following plaintext using the keyword below.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>keyword:   secret
+plaintext: I love this cipher!
+</code></pre></div></div>
+
+<h3 id="todo-hideshow-the-answer">todo hide/show the answer</h3>
+<p>This is the ciphertext message: <code class="highlighter-rouge">A nfzx xjzw umryik!</code>.  Did you get it right?</p>
+
+<p>Notice that unlike the substitution ciphers we worked with, the Vigenère cipher requires us to have a keyword that everyone in our secret club needs to know.  This is referred to as a pre-shared key meaning that we have to share the key before we start sending and receiving messages.</p>
+
+<p>The decryption of the message looks very similar to the encryption.  We still need our keyword, but instead of using the column that is associated with the letter we are decrypting we find the letter in the row and look up to the letter at the top of the column.  Try it with one of the examples we did for the encryption.  Can you decrypt the ciphertext and get the plaintext?</p>
+
+<p>Try to decrypt this encrypted message:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>keyword:    youthcodejam
+ciphertext: G bhwg L moz'h kbp ryc ad nbtg
+</code></pre></div></div>
+
+<h3 id="todo-hideshow-the-answer-1">todo hide/show the answer</h3>
+<p>This is the plaintext message: <code class="highlighter-rouge">I hope I don't run out of time</code>.  Did you get it right?</p>
+
+<p>Now it is your turn:</p>
+
+<ol>
+  <li>Write a message that you want to encrypt.</li>
+  <li>Create a keyword you would like to use.</li>
+  <li>Encrypt your message.</li>
+  <li>Pass the message and the keyword to the person with you and see if they can understand it.</li>
+</ol>
+
+<p>Keep doing those steps until you feel like you understand the substitution cipher well.</p>
+
+<p><a href="https://en.wikipedia.org/wiki/Vigenère_cipher">Click here to learn more about the Vigenère cipher.</a></p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-09-27T11:00:00-05:00">September 27, 2019</time></p>
+        
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/ycj/cryptography/substitution/cipher/2019/09/27/03-substitution-cipher.html" class="pagination--pager" title="Substitution Cipher
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+
+    <li><a href="/ycj/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 Cryptography and Cybersecurity. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/ycj/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

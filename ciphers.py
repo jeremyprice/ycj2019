@@ -66,6 +66,9 @@ class vigenere(cipher):
             keyword += key
         ciphertext = []
         for idx, letter in enumerate(plaintext):
+            if letter in string.punctuation or letter in string.whitespace:
+                ciphertext.append(letter)
+                continue
             key = keyword[idx]
             shift = -(ord(key) - ord('a'))
             if letter.isupper():
@@ -85,6 +88,9 @@ class vigenere(cipher):
             keyword += key
         plaintext = []
         for idx, letter in enumerate(ciphertext):
+            if letter in string.punctuation or letter in string.whitespace:
+                plaintext.append(letter)
+                continue
             key = keyword[idx]
             shift = -(ord(key) - ord('a'))
             if letter.isupper():
