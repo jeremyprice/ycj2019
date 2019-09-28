@@ -52,3 +52,5 @@ Now it is your turn:
 4. Pass it to the person with you and see if they can understand it.
 
 Keep doing those steps until you feel like you understand the shift cipher well.
+
+[Click here to learn more about shift ciphers.](https://en.wikipedia.org/wiki/Caesar_cipher)

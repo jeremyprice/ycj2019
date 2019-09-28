@@ -53,3 +53,45 @@ class substitution(cipher):
         t = str.maketrans(key.lower() + key.upper(),
                           string.ascii_lowercase + string.ascii_uppercase)
         return ciphertext.translate(t)
+
+
+class vigenere(cipher):
+    def _rotate(self, input, distance):
+        return input[-distance:] + input[0:-distance]
+
+    def encrypt(self, plaintext, keyword):
+        keyword = keyword.lower()
+        key = keyword
+        while len(keyword) < len(plaintext):
+            keyword += key
+        ciphertext = []
+        for idx, letter in enumerate(plaintext):
+            key = keyword[idx]
+            shift = -(ord(key) - ord('a'))
+            if letter.isupper():
+                letter_idx = ord(letter) - ord('A')
+                lookup = string.ascii_uppercase
+            else:
+                letter_idx = ord(letter) - ord('a')
+                lookup = string.ascii_lowercase
+            cipher = self._rotate(lookup, shift)
+            ciphertext.append(cipher[letter_idx])
+        return ''.join(ciphertext)
+
+    def decrypt(self, ciphertext, keyword):
+        keyword = keyword.lower()
+        key = keyword
+        while len(keyword) < len(ciphertext):
+            keyword += key
+        plaintext = []
+        for idx, letter in enumerate(ciphertext):
+            key = keyword[idx]
+            shift = -(ord(key) - ord('a'))
+            if letter.isupper():
+                lookup = string.ascii_uppercase
+            else:
+                lookup = string.ascii_lowercase
+            cipher = self._rotate(lookup, shift)
+            letter_idx = cipher.find(letter)
+            plaintext.append(lookup[letter_idx])
+        return ''.join(plaintext)

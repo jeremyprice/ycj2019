@@ -107,5 +107,39 @@ class TestSubstitutionCipher(unittest.TestCase):
             self.assertEqual(plaintext, expected)
 
 
+class TestVigenereCipher(unittest.TestCase):
+    def test_wikipedia_encrypt(self):
+        v = ciphers.vigenere()
+        expected = 'LXFOPVEFRNHR'
+        plaintext = 'ATTACKATDAWN'
+        keyword = 'LEMON'
+        ciphertext = v.encrypt(plaintext, keyword)
+        self.assertEqual(ciphertext, expected)
+
+    def test_wikipedia_decrypt(self):
+        v = ciphers.vigenere()
+        ciphertext = 'LXFOPVEFRNHR'
+        expected = 'ATTACKATDAWN'
+        keyword = 'LEMON'
+        plaintext = v.decrypt(ciphertext, keyword)
+        self.assertEqual(plaintext, expected)
+
+    def test_short_encrypt(self):
+        v = ciphers.vigenere()
+        expected = 'cdspg'
+        plaintext = 'apple'
+        keyword = 'code'
+        ciphertext = v.encrypt(plaintext, keyword)
+        self.assertEqual(ciphertext, expected)
+
+    def test_short_decrypt(self):
+        v = ciphers.vigenere()
+        expected = 'apple'
+        ciphertext = 'cdspg'
+        keyword = 'code'
+        plaintext = v.decrypt(ciphertext, keyword)
+        self.assertEqual(plaintext, expected)
+
+
 if __name__ == '__main__':
     unittest.main()

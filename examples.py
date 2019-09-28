@@ -38,3 +38,7 @@ key = 'qagydutpohckbjxsmwvrfizeln'
 plain = "Thanks for decrypting this"
 subs = ciphers.substitution()
 print('Substitution: {} | {}'.format(plain, subs.encrypt(plain, key)))
+
+v = ciphers.vigenere()
+print('{} | {}'.format('abcdefghi', v._rotate('abcdefghi', 3)))
+print('{} | {}'.format('abcdefghi', v._rotate('abcdefghi', -3)))
