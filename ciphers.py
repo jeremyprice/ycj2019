@@ -101,3 +101,13 @@ class vigenere(cipher):
             letter_idx = cipher.find(letter)
             plaintext.append(lookup[letter_idx])
         return ''.join(plaintext)
+
+
+class base64(cipher):
+    def encrypt(self, plaintext):
+        import base64
+        return base64.b64encode(plaintext.encode()).decode()
+
+    def decrypt(self, ciphertext):
+        import base64
+        return base64.b64decode(ciphertext.encode()).decode()

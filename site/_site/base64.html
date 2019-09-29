@@ -18,7 +18,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Cryptography and Cybersecurity">
 <meta property="og:title" content="Base64 Encoding">
-<meta property="og:url" content="http://23.253.253.83//ycj/base64.html">
+<meta property="og:url" content="http://localhost:4000/ycj/base64.html">
 
 
 
@@ -32,7 +32,7 @@
 
 
 
-<link rel="canonical" href="http://23.253.253.83//ycj/base64.html">
+<link rel="canonical" href="http://localhost:4000/ycj/base64.html">
 
 
 
@@ -43,7 +43,7 @@
     
       "@type": "Person",
       "name": null,
-      "url": "http://23.253.253.83//ycj/"
+      "url": "http://localhost:4000/ycj/"
     
   }
 </script>
@@ -232,7 +232,22 @@
 
 <p><img src="/ycj/images/base64_index_table.png" alt="Base64 index table" /></p>
 
-<p>To use the table, we look for the 6-bit binary value we need to represent and then look over at the Char in that row.  Thus, if we want to encode the values <code class="highlighter-rouge">010110</code> and <code class="highlighter-rouge">111000</code> the Chars would be <code class="highlighter-rouge">W</code> and <code class="highlighter-rouge">4</code> respectively.  Note that the table has both lowercase and uppercase letters so you need to make sure you capture the case.</p>
+<p>To use the table, we look for the 6-bit binary value we need to represent and then look over at the Char in that row.  Thus, if we want to encode the values <code class="highlighter-rouge">010110</code> and <code class="highlighter-rouge">111000</code> the Chars would be <code class="highlighter-rouge">W</code> and <code class="highlighter-rouge">4</code> respectively.  Note that the table has both lowercase and uppercase letters so you need to make sure you pay attention to the case.</p>
+
+<p>Let’s look at an example of how we would encode a message into base64.  The example word we will use is <code class="highlighter-rouge">Man</code>:
+<img src="/ycj/images/base64_word_example.png" alt="Base64 word example" /></p>
+
+<p>Notice how we took 3 characters, which are each 1 byte long, and turned it into 4 6-bit values that we turned back into characters using our index table.  Lots of steps involved!</p>
+
+<p>What happens when we don’t have an even multiple of 3 in our source message?  We need to do some padding to finish out the 24-bit number nicely.  In base64 we use the <code class="highlighter-rouge">=</code> symbol as the padding character.  Let’s assume we only have one character to encode, the letter <code class="highlighter-rouge">M</code>.</p>
+
+<p><img src="/ycj/images/base64_padding_example.png" alt="Base64 padding example" /></p>
+
+<p>Now we have enough information to do an example.  Let’s take the phrase <code class="highlighter-rouge">Hello World!</code> and base64 encode it.  Here is the algorithm:</p>
+<ol>
+  <li>Look up the ASCII value for the character in the <a href="https://en.wikipedia.org/wiki/ASCII">ASCII chart</a> and write down the binary code.</li>
+  <li></li>
+</ol>
 
 <p><button onclick="showHide('ct1')">Click here to see the answer</button></p>
 <div id="ct1" style="display: none;

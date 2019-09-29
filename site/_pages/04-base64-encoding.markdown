@@ -12,9 +12,20 @@ The core premise behind Base64 encoding is that a series of characters in the me
 
 ![Base64 index table](/ycj/images/base64_index_table.png)
 
-To use the table, we look for the 6-bit binary value we need to represent and then look over at the Char in that row.  Thus, if we want to encode the values `010110` and `111000` the Chars would be `W` and `4` respectively.  Note that the table has both lowercase and uppercase letters so you need to make sure you capture the case.
+To use the table, we look for the 6-bit binary value we need to represent and then look over at the Char in that row.  Thus, if we want to encode the values `010110` and `111000` the Chars would be `W` and `4` respectively.  Note that the table has both lowercase and uppercase letters so you need to make sure you pay attention to the case.
 
+Let's look at an example of how we would encode a message into base64.  The example word we will use is `Man`:
+![Base64 word example](/ycj/images/base64_word_example.png)
 
+Notice how we took 3 characters, which are each 1 byte long, and turned it into 4 6-bit values that we turned back into characters using our index table.  Lots of steps involved!
+
+What happens when we don't have an even multiple of 3 in our source message?  We need to do some padding to finish out the 24-bit number nicely.  In base64 we use the `=` symbol as the padding character.  Let's assume we only have one character to encode, the letter `M`.
+
+![Base64 padding example](/ycj/images/base64_padding_example.png)
+
+Now we have enough information to do an example.  Let's take the phrase `Hello World!` and base64 encode it.  Here is the algorithm:
+ 1. Look up the ASCII value for the character in the [ASCII chart](https://en.wikipedia.org/wiki/ASCII) and write down the binary code.
+ 2. 
 
 <button onclick="showHide('ct1')">Click here to see the answer</button>
 <div id="ct1" style="display: none;
