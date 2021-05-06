@@ -1,7 +1,7 @@
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.16.6 by Michael Rose
-  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Minimal Mistakes Jekyll Theme 4.22.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
@@ -18,7 +18,10 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Cryptography and Cybersecurity">
 <meta property="og:title" content="Substitution Cipher">
-<meta property="og:url" content="http://localhost:4000/ycj/substitution.html">
+<meta property="og:url" content="http://23.253.253.83//ycj/substitution.html">
+
+
+  <meta property="og:description" content="Work through some online activities to learn about cryptography and cybersecurity.  Try out different ciphers, encrypt and decrypt strings, impress your friends and frustrate your enemies!">
 
 
 
@@ -31,8 +34,7 @@
 
 
 
-
-<link rel="canonical" href="http://localhost:4000/ycj/substitution.html">
+<link rel="canonical" href="http://23.253.253.83//ycj/substitution.html">
 
 
 
@@ -43,7 +45,7 @@
     
       "@type": "Person",
       "name": null,
-      "url": "http://localhost:4000/ycj/"
+      "url": "http://23.253.253.83//ycj/"
     
   }
 </script>
@@ -56,7 +58,9 @@
 <!-- end _includes/seo.html -->
 
 
-<link href="/ycj/feed.xml" type="application/atom+xml" rel="alternate" title="Cryptography and Cybersecurity Feed">
+
+  <link href="/ycj/feed.xml" type="application/atom+xml" rel="alternate" title="Cryptography and Cybersecurity Feed">
+
 
 <!-- https://t.co/dKP3o1e -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -67,8 +71,9 @@
 
 <!-- For all browsers -->
 <link rel="stylesheet" href="/ycj/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
 
-<!--[if IE ]>
+<!--[if IE]>
   <style>
     /* old IE unsupported flexbox fixes */
     .greedy-nav .site-title {
@@ -82,7 +87,6 @@
     }
   </style>
 <![endif]-->
-
 
 
     <!-- start custom head snippets -->
@@ -158,9 +162,6 @@
     
       <li>
         
-          
-          
-
           <a href="/ycj/shift.html"><span class="nav__sub-title">01: Shift Cipher</span></a>
         
 
@@ -169,9 +170,6 @@
     
       <li>
         
-          
-          
-
           <a href="/ycj/substitution.html"><span class="nav__sub-title">02: Substitution Cipher</span></a>
         
 
@@ -180,9 +178,6 @@
     
       <li>
         
-          
-          
-
           <a href="/ycj/vigenere.html"><span class="nav__sub-title">03: Vigenère Cipher</span></a>
         
 
@@ -191,9 +186,6 @@
     
       <li>
         
-          
-          
-
           <a href="/ycj/challenges.html"><span class="nav__sub-title">Challenges</span></a>
         
 
@@ -202,9 +194,11 @@
     
   </ul>
 </nav>
+
     
   
   </div>
+
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
@@ -219,28 +213,30 @@
           <h1 id="page-title" class="page__title" itemprop="headline">Substitution Cipher
 </h1>
           
+
+
         </header>
       
 
       <section class="page__content" itemprop="text">
         
         <p>Now that you know the shift cipher, let’s talk about it’s family.  The shift cipher is one form of a substitution cipher.  In a basic substitution cipher we substitute on letter for another letter.  In the shift cipher, we create the key by shifting all the letters by a constant amount.  For instance, here is the key for a shift cipher with a distance of 6:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>abcdefghijklmnopqrstuvwxyz
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>abcdefghijklmnopqrstuvwxyz
 ghijklmnopqrstuvwxyzabcdef
 </code></pre></div></div>
 
 <p>With a shift cipher it is easy to break the encryption if you figure out a few letters because you can see the pattern that they are shifted by a constant value.  To make our encryption a little stronger we can implement a more generic substitution cipher.  Instead of shifting by a constant amount we could choose a key where each letter corresponded to a random ciphertext letter.  For instance, let’s use this key to encrypt our message:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>abcdefghijklmnopqrstuvwxyz
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>abcdefghijklmnopqrstuvwxyz
 qagydutpohckbjxsmwvrfizeln
 </code></pre></div></div>
 
 <p>Here is what our plaintext and ciphertext would look like:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>It's the best day ever!
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>It's the best day ever!
 Or'v rpd advr yql didw!
 </code></pre></div></div>
 
 <p>Now it is your turn.  Here is the ciphertext, decrypt it using the key listed above.</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Rpqjcv uxw ydgwlsrojt rpov
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Rpqjcv uxw ydgwlsrojt rpov
 </code></pre></div></div>
 
 <p><button onclick="showHide('pt1')">Click here to see the answer</button></p>
@@ -294,6 +290,7 @@ function showHide(elId) {
 
 
         
+
       </footer>
 
       
@@ -323,18 +320,19 @@ function showHide(elId) {
 
     
 
-    <li><a href="/ycj/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+      <li><a href="/ycj/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2019 Cryptography and Cybersecurity. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2021 Cryptography and Cybersecurity. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
 
     
   <script src="/ycj/assets/js/main.min.js"></script>
-  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
 
 
 

@@ -1,7 +1,7 @@
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.16.6 by Michael Rose
-  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Minimal Mistakes Jekyll Theme 4.22.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
@@ -18,7 +18,10 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Cryptography and Cybersecurity">
 <meta property="og:title" content="Cryptography Challenges">
-<meta property="og:url" content="http://localhost:4000/ycj/challenges.html">
+<meta property="og:url" content="http://23.253.253.83//ycj/challenges.html">
+
+
+  <meta property="og:description" content="Work through some online activities to learn about cryptography and cybersecurity.  Try out different ciphers, encrypt and decrypt strings, impress your friends and frustrate your enemies!">
 
 
 
@@ -31,8 +34,7 @@
 
 
 
-
-<link rel="canonical" href="http://localhost:4000/ycj/challenges.html">
+<link rel="canonical" href="http://23.253.253.83//ycj/challenges.html">
 
 
 
@@ -43,7 +45,7 @@
     
       "@type": "Person",
       "name": null,
-      "url": "http://localhost:4000/ycj/"
+      "url": "http://23.253.253.83//ycj/"
     
   }
 </script>
@@ -56,7 +58,9 @@
 <!-- end _includes/seo.html -->
 
 
-<link href="/ycj/feed.xml" type="application/atom+xml" rel="alternate" title="Cryptography and Cybersecurity Feed">
+
+  <link href="/ycj/feed.xml" type="application/atom+xml" rel="alternate" title="Cryptography and Cybersecurity Feed">
+
 
 <!-- https://t.co/dKP3o1e -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -67,8 +71,9 @@
 
 <!-- For all browsers -->
 <link rel="stylesheet" href="/ycj/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
 
-<!--[if IE ]>
+<!--[if IE]>
   <style>
     /* old IE unsupported flexbox fixes */
     .greedy-nav .site-title {
@@ -82,7 +87,6 @@
     }
   </style>
 <![endif]-->
-
 
 
     <!-- start custom head snippets -->
@@ -158,9 +162,6 @@
     
       <li>
         
-          
-          
-
           <a href="/ycj/shift.html"><span class="nav__sub-title">01: Shift Cipher</span></a>
         
 
@@ -169,9 +170,6 @@
     
       <li>
         
-          
-          
-
           <a href="/ycj/substitution.html"><span class="nav__sub-title">02: Substitution Cipher</span></a>
         
 
@@ -180,9 +178,6 @@
     
       <li>
         
-          
-          
-
           <a href="/ycj/vigenere.html"><span class="nav__sub-title">03: Vigenère Cipher</span></a>
         
 
@@ -191,9 +186,6 @@
     
       <li>
         
-          
-          
-
           <a href="/ycj/challenges.html"><span class="nav__sub-title">Challenges</span></a>
         
 
@@ -202,9 +194,11 @@
     
   </ul>
 </nav>
+
     
   
   </div>
+
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
@@ -219,6 +213,8 @@
           <h1 id="page-title" class="page__title" itemprop="headline">Cryptography Challenges
 </h1>
           
+
+
         </header>
       
 
@@ -229,7 +225,7 @@
 <p>Now that you know the <a href="/ycj/shift">Shift Cipher</a>, the <a href="/ycj/substitution">Substitution Cipher</a>, and the <a href="/ycj/vigenere">Vigenère Cipher</a> you are ready to try to decode some intercepted communications.  Below are some communications we’ve intercepted.  The encryption cipher is unknown, as well as any of the cipher parameters.  To succeed at each challenge you will need to determine the encryption cipher, it’s parameters, and decode the message.  We believe that all the messages are common phrases or documents, but you’ll have to verify our assumptions.  Good luck!</p>
 
 <h2 id="challenge-no-1">Challenge no. 1</h2>
-<p><code class="highlighter-rouge">Ow lzw Hwghdw gx lzw Mfalwv Klslwk, af Gjvwj lg xgje s egjw hwjxwul Mfagf, wklstdakz Bmklauw, afkmjw vgewklau Ljsfimadalq, hjgnavw xgj lzw ugeegf vwxwfuw, hjgeglw lzw ywfwjsd Owdxsjw, sfv kwumjw lzw Tdwkkafyk gx Datwjlq lg gmjkwdnwk sfv gmj Hgklwjalq, vg gjvsaf sfv wklstdakz lzak Ugfklalmlagf xgj lzw Mfalwv Klslwk gx Sewjaus.
+<p><code class="language-plaintext highlighter-rouge">Ow lzw Hwghdw gx lzw Mfalwv Klslwk, af Gjvwj lg xgje s egjw hwjxwul Mfagf, wklstdakz Bmklauw, afkmjw vgewklau Ljsfimadalq, hjgnavw xgj lzw ugeegf vwxwfuw, hjgeglw lzw ywfwjsd Owdxsjw, sfv kwumjw lzw Tdwkkafyk gx Datwjlq lg gmjkwdnwk sfv gmj Hgklwjalq, vg gjvsaf sfv wklstdakz lzak Ugfklalmlagf xgj lzw Mfalwv Klslwk gx Sewjaus.
 </code></p>
 
 <p><button onclick="showHide('ch1')">Need a hint?</button></p>
@@ -265,7 +261,7 @@ Here is the plaintext:<br />
 </div>
 
 <h2 id="challenge-no-2">Challenge no. 2</h2>
-<p><code class="highlighter-rouge">G yjgmeg ynuciryplc cm cfg Dnje xd cfg Sprrgm Ucyvnq xd Jkgagej, jlf rq rjn Tnnwkjkl hxp ffklf rr brcwbu, qwc Wyvrmp spmct Eqm, rlfrtkbgduc, ukcf ugdnpvh cwb ssucgen hxp jjn.</code></p>
+<p><code class="language-plaintext highlighter-rouge">G yjgmeg ynuciryplc cm cfg Dnje xd cfg Sprrgm Ucyvnq xd Jkgagej, jlf rq rjn Tnnwkjkl hxp ffklf rr brcwbu, qwc Wyvrmp spmct Eqm, rlfrtkbgduc, ukcf ugdnpvh cwb ssucgen hxp jjn.</code></p>
 
 <p><button onclick="showHide('ch2')">Need a hint?</button></p>
 <div id="ch2" style="display: none;
@@ -300,7 +296,7 @@ Here is the plaintext:<br />
 </div>
 
 <h2 id="challenge-no-3">Challenge no. 3</h2>
-<p><code class="highlighter-rouge">Yxdxr qyn Qnzjb csjo; T msnvon jssnotjdgn qx qynn, Qnzjb, xdn bqjqn pdvnr Oxv, xdn jdv tdvtltbthsn.</code></p>
+<p><code class="language-plaintext highlighter-rouge">Yxdxr qyn Qnzjb csjo; T msnvon jssnotjdgn qx qynn, Qnzjb, xdn bqjqn pdvnr Oxv, xdn jdv tdvtltbthsn.</code></p>
 
 <p><button onclick="showHide('ch3')">Need a hint?</button></p>
 <div id="ch3" style="display: none;
@@ -335,7 +331,7 @@ Here is the plaintext:<br />
 </div>
 
 <h2 id="challenge-no-4">Challenge no. 4</h2>
-<p><code class="highlighter-rouge">Iyedr Myno Tkw zbyfsnoc sxxyfkdsfo, swzkmdpev kxn pkwsvi-pymecon yed yp cmryyv dswo, rkxnc-yx mywzedsxq zbyqbkwc pyb U-12 cdenoxdc kc govv kc dokmrob zbypoccsyxkv nofovyzwoxd nocsqxon dy lbsxq mywzedob cmsoxmo dy ofobi cmryyv kxn ofobi mvkccbyyw</code></p>
+<p><code class="language-plaintext highlighter-rouge">Iyedr Myno Tkw zbyfsnoc sxxyfkdsfo, swzkmdpev kxn pkwsvi-pymecon yed yp cmryyv dswo, rkxnc-yx mywzedsxq zbyqbkwc pyb U-12 cdenoxdc kc govv kc dokmrob zbypoccsyxkv nofovyzwoxd nocsqxon dy lbsxq mywzedob cmsoxmo dy ofobi cmryyv kxn ofobi mvkccbyyw</code></p>
 
 <p><button onclick="showHide('ch4')">Need a hint?</button></p>
 <div id="ch4" style="display: none;
@@ -398,6 +394,7 @@ function showHide(elId) {
 
 
         
+
       </footer>
 
       
@@ -427,18 +424,19 @@ function showHide(elId) {
 
     
 
-    <li><a href="/ycj/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+      <li><a href="/ycj/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2019 Cryptography and Cybersecurity. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2021 Cryptography and Cybersecurity. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
 
     
   <script src="/ycj/assets/js/main.min.js"></script>
-  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
 
 
 

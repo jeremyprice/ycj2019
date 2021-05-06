@@ -1,1 +1,1 @@
-Sitemap: http://localhost:4000/ycj/sitemap.xml
+Sitemap: http://23.253.253.83//ycj/sitemap.xml

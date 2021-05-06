@@ -1,7 +1,7 @@
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.16.6 by Michael Rose
-  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Minimal Mistakes Jekyll Theme 4.22.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
@@ -18,7 +18,10 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Cryptography and Cybersecurity">
 <meta property="og:title" content="Shift Cipher">
-<meta property="og:url" content="http://localhost:4000/ycj/shift.html">
+<meta property="og:url" content="http://23.253.253.83//ycj/shift.html">
+
+
+  <meta property="og:description" content="Work through some online activities to learn about cryptography and cybersecurity.  Try out different ciphers, encrypt and decrypt strings, impress your friends and frustrate your enemies!">
 
 
 
@@ -31,8 +34,7 @@
 
 
 
-
-<link rel="canonical" href="http://localhost:4000/ycj/shift.html">
+<link rel="canonical" href="http://23.253.253.83//ycj/shift.html">
 
 
 
@@ -43,7 +45,7 @@
     
       "@type": "Person",
       "name": null,
-      "url": "http://localhost:4000/ycj/"
+      "url": "http://23.253.253.83//ycj/"
     
   }
 </script>
@@ -56,7 +58,9 @@
 <!-- end _includes/seo.html -->
 
 
-<link href="/ycj/feed.xml" type="application/atom+xml" rel="alternate" title="Cryptography and Cybersecurity Feed">
+
+  <link href="/ycj/feed.xml" type="application/atom+xml" rel="alternate" title="Cryptography and Cybersecurity Feed">
+
 
 <!-- https://t.co/dKP3o1e -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -67,8 +71,9 @@
 
 <!-- For all browsers -->
 <link rel="stylesheet" href="/ycj/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
 
-<!--[if IE ]>
+<!--[if IE]>
   <style>
     /* old IE unsupported flexbox fixes */
     .greedy-nav .site-title {
@@ -82,7 +87,6 @@
     }
   </style>
 <![endif]-->
-
 
 
     <!-- start custom head snippets -->
@@ -158,9 +162,6 @@
     
       <li>
         
-          
-          
-
           <a href="/ycj/shift.html"><span class="nav__sub-title">01: Shift Cipher</span></a>
         
 
@@ -169,9 +170,6 @@
     
       <li>
         
-          
-          
-
           <a href="/ycj/substitution.html"><span class="nav__sub-title">02: Substitution Cipher</span></a>
         
 
@@ -180,9 +178,6 @@
     
       <li>
         
-          
-          
-
           <a href="/ycj/vigenere.html"><span class="nav__sub-title">03: Vigenère Cipher</span></a>
         
 
@@ -191,9 +186,6 @@
     
       <li>
         
-          
-          
-
           <a href="/ycj/challenges.html"><span class="nav__sub-title">Challenges</span></a>
         
 
@@ -202,9 +194,11 @@
     
   </ul>
 </nav>
+
     
   
   </div>
+
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
@@ -219,6 +213,8 @@
           <h1 id="page-title" class="page__title" itemprop="headline">Shift Cipher
 </h1>
           
+
+
         </header>
       
 
@@ -227,16 +223,16 @@
         <p>The shift cipher is a very common cipher that is easy to understand, easy to encrypt and decrypt, but provides a basic level of security for your message.  Essentially, a shift cipher requires that we take each letter in our source message and shift it by a specified amount.  This cipher is sometimes referred to as a Caesar Cipher.</p>
 
 <p><img src="/ycj/images/Caesar_cipher_left_shift_of_3.svg" alt="example shift cipher" />
-Here is an example of the shift cipher.  For this example, we chose a left shift of 3 for each letter (often represented as a distance of <code class="highlighter-rouge">-3</code>).  Thus, each occurrence of the letter <code class="highlighter-rouge">E</code> in the plaintext message becomes the letter <code class="highlighter-rouge">B</code> in the ciphertext message.</p>
+Here is an example of the shift cipher.  For this example, we chose a left shift of 3 for each letter (often represented as a distance of <code class="language-plaintext highlighter-rouge">-3</code>).  Thus, each occurrence of the letter <code class="language-plaintext highlighter-rouge">E</code> in the plaintext message becomes the letter <code class="language-plaintext highlighter-rouge">B</code> in the ciphertext message.</p>
 
 <p>If we encrypt a message using the left shift of 3 example you see above it would look something like this:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Really important message contained herein
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Really important message contained herein
 Obxiiv fjmloqxkq jbppxdb zlkqxfkba ebobfk
 </code></pre></div></div>
 
 <p>Now it is your turn.  The message below is encrypted using a shift of 2.  Can you decrypt the message?</p>
 
-<p><code class="highlighter-rouge">vguv oguucig</code></p>
+<p><code class="language-plaintext highlighter-rouge">vguv oguucig</code></p>
 
 <p><button onclick="showHide('plaintext1')">Click here to see the answer</button></p>
 <div id="plaintext1" style="display: none;
@@ -258,9 +254,9 @@ Did you get it right?
 <p>What happened to the space in that message?  Did our encryption change it at all?  What do you think we should do with other punctuation?  For a shift cipher we ignore any characters that aren’t alphabetical (a-z).  Any punctuation or whitespace is copied verbatim from the plaintext message to the ciphertext message.
 Also, each ciphertext character is the same case as the plaintext character.  For instance, a capital letter in plaintext will result in a capital letter in the ciphertext.</p>
 
-<p>Let’s try a negative shift.  A negative shift makes us shift to the left instead of to the right.  The following message has a shift distance of <code class="highlighter-rouge">-5</code>.  Can you decode the message?</p>
+<p>Let’s try a negative shift.  A negative shift makes us shift to the left instead of to the right.  The following message has a shift distance of <code class="language-plaintext highlighter-rouge">-5</code>.  Can you decode the message?</p>
 
-<p><code class="highlighter-rouge">Ocdn hznnvbz dni'o izbvodqz</code></p>
+<p><code class="language-plaintext highlighter-rouge">Ocdn hznnvbz dni'o izbvodqz</code></p>
 
 <p><button onclick="showHide('plaintext2')">Click here to see the answer</button></p>
 <div id="plaintext2" style="display: none;
@@ -282,8 +278,8 @@ Did you get it right?
 <p>A handy tool you can use to implement a shift cipher is a code wheel (very similar to a secret decoder ring).  <a href="http://inventwithpython.com/cipherwheel/" target="_blank_">Here is a cool one that you can use on the internet</a>  <strong>Note: it doesn’t work in a mobile browser.</strong></p>
 
 <p>Our work so far has been decrypting messages using the shift cipher, but that’s only half the work.  Here are some messages for you to encrypt.  The number in front of each message indicates the shift distance.  Can you figure out what the ciphertext looks like?
-<code class="highlighter-rouge">7</code>:<code class="highlighter-rouge">Hello World!</code><br />
-<code class="highlighter-rouge">-4</code>: <code class="highlighter-rouge">Goodbye World?</code></p>
+<code class="language-plaintext highlighter-rouge">7</code>:<code class="language-plaintext highlighter-rouge">Hello World!</code><br />
+<code class="language-plaintext highlighter-rouge">-4</code>: <code class="language-plaintext highlighter-rouge">Goodbye World?</code></p>
 
 <p><button onclick="showHide('plaintext3')">Click here to see the answer</button></p>
 <div id="plaintext3" style="display: none;
@@ -337,6 +333,7 @@ function showHide(elId) {
 
 
         
+
       </footer>
 
       
@@ -366,18 +363,19 @@ function showHide(elId) {
 
     
 
-    <li><a href="/ycj/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+      <li><a href="/ycj/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2019 Cryptography and Cybersecurity. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2021 Cryptography and Cybersecurity. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
 
     
   <script src="/ycj/assets/js/main.min.js"></script>
-  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
 
 
 

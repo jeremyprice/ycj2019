@@ -1,7 +1,7 @@
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.16.6 by Michael Rose
-  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Minimal Mistakes Jekyll Theme 4.22.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
@@ -18,7 +18,10 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Cryptography and Cybersecurity">
 <meta property="og:title" content="Base64 Encoding">
-<meta property="og:url" content="http://localhost:4000/ycj/base64.html">
+<meta property="og:url" content="http://23.253.253.83//ycj/base64.html">
+
+
+  <meta property="og:description" content="Work through some online activities to learn about cryptography and cybersecurity.  Try out different ciphers, encrypt and decrypt strings, impress your friends and frustrate your enemies!">
 
 
 
@@ -31,8 +34,7 @@
 
 
 
-
-<link rel="canonical" href="http://localhost:4000/ycj/base64.html">
+<link rel="canonical" href="http://23.253.253.83//ycj/base64.html">
 
 
 
@@ -43,7 +45,7 @@
     
       "@type": "Person",
       "name": null,
-      "url": "http://localhost:4000/ycj/"
+      "url": "http://23.253.253.83//ycj/"
     
   }
 </script>
@@ -56,7 +58,9 @@
 <!-- end _includes/seo.html -->
 
 
-<link href="/ycj/feed.xml" type="application/atom+xml" rel="alternate" title="Cryptography and Cybersecurity Feed">
+
+  <link href="/ycj/feed.xml" type="application/atom+xml" rel="alternate" title="Cryptography and Cybersecurity Feed">
+
 
 <!-- https://t.co/dKP3o1e -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -67,8 +71,9 @@
 
 <!-- For all browsers -->
 <link rel="stylesheet" href="/ycj/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
 
-<!--[if IE ]>
+<!--[if IE]>
   <style>
     /* old IE unsupported flexbox fixes */
     .greedy-nav .site-title {
@@ -82,7 +87,6 @@
     }
   </style>
 <![endif]-->
-
 
 
     <!-- start custom head snippets -->
@@ -158,9 +162,6 @@
     
       <li>
         
-          
-          
-
           <a href="/ycj/shift.html"><span class="nav__sub-title">01: Shift Cipher</span></a>
         
 
@@ -169,9 +170,6 @@
     
       <li>
         
-          
-          
-
           <a href="/ycj/substitution.html"><span class="nav__sub-title">02: Substitution Cipher</span></a>
         
 
@@ -180,9 +178,6 @@
     
       <li>
         
-          
-          
-
           <a href="/ycj/vigenere.html"><span class="nav__sub-title">03: Vigenère Cipher</span></a>
         
 
@@ -191,9 +186,6 @@
     
       <li>
         
-          
-          
-
           <a href="/ycj/challenges.html"><span class="nav__sub-title">Challenges</span></a>
         
 
@@ -202,9 +194,11 @@
     
   </ul>
 </nav>
+
     
   
   </div>
+
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
@@ -219,6 +213,8 @@
           <h1 id="page-title" class="page__title" itemprop="headline">Base64 Encoding
 </h1>
           
+
+
         </header>
       
 
@@ -232,18 +228,18 @@
 
 <p><img src="/ycj/images/base64_index_table.png" alt="Base64 index table" /></p>
 
-<p>To use the table, we look for the 6-bit binary value we need to represent and then look over at the Char in that row.  Thus, if we want to encode the values <code class="highlighter-rouge">010110</code> and <code class="highlighter-rouge">111000</code> the Chars would be <code class="highlighter-rouge">W</code> and <code class="highlighter-rouge">4</code> respectively.  Note that the table has both lowercase and uppercase letters so you need to make sure you pay attention to the case.</p>
+<p>To use the table, we look for the 6-bit binary value we need to represent and then look over at the Char in that row.  Thus, if we want to encode the values <code class="language-plaintext highlighter-rouge">010110</code> and <code class="language-plaintext highlighter-rouge">111000</code> the Chars would be <code class="language-plaintext highlighter-rouge">W</code> and <code class="language-plaintext highlighter-rouge">4</code> respectively.  Note that the table has both lowercase and uppercase letters so you need to make sure you pay attention to the case.</p>
 
-<p>Let’s look at an example of how we would encode a message into base64.  The example word we will use is <code class="highlighter-rouge">Man</code>:
+<p>Let’s look at an example of how we would encode a message into base64.  The example word we will use is <code class="language-plaintext highlighter-rouge">Man</code>:
 <img src="/ycj/images/base64_word_example.png" alt="Base64 word example" /></p>
 
 <p>Notice how we took 3 characters, which are each 1 byte long, and turned it into 4 6-bit values that we turned back into characters using our index table.  Lots of steps involved!</p>
 
-<p>What happens when we don’t have an even multiple of 3 in our source message?  We need to do some padding to finish out the 24-bit number nicely.  In base64 we use the <code class="highlighter-rouge">=</code> symbol as the padding character.  Let’s assume we only have one character to encode, the letter <code class="highlighter-rouge">M</code>.</p>
+<p>What happens when we don’t have an even multiple of 3 in our source message?  We need to do some padding to finish out the 24-bit number nicely.  In base64 we use the <code class="language-plaintext highlighter-rouge">=</code> symbol as the padding character.  Let’s assume we only have one character to encode, the letter <code class="language-plaintext highlighter-rouge">M</code>.</p>
 
 <p><img src="/ycj/images/base64_padding_example.png" alt="Base64 padding example" /></p>
 
-<p>Now we have enough information to do an example.  Let’s take the phrase <code class="highlighter-rouge">Hello World!</code> and base64 encode it.  Here is the algorithm:</p>
+<p>Now we have enough information to do an example.  Let’s take the phrase <code class="language-plaintext highlighter-rouge">Hello World!</code> and base64 encode it.  Here is the algorithm:</p>
 <ol>
   <li>Look up the ASCII value for the character in the <a href="https://en.wikipedia.org/wiki/ASCII">ASCII chart</a> and write down the binary code.</li>
   <li></li>
@@ -302,6 +298,7 @@ function showHide(elId) {
 
 
         
+
       </footer>
 
       
@@ -331,18 +328,19 @@ function showHide(elId) {
 
     
 
-    <li><a href="/ycj/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+      <li><a href="/ycj/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2019 Cryptography and Cybersecurity. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2021 Cryptography and Cybersecurity. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
 
     
   <script src="/ycj/assets/js/main.min.js"></script>
-  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
 
 
 

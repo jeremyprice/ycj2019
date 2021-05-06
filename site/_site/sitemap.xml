@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/ycj/shift.html</loc>
+<loc>http://23.253.253.83//ycj/shift.html</loc>
 </url>
 <url>
-<loc>http://localhost:4000/ycj/substitution.html</loc>
+<loc>http://23.253.253.83//ycj/substitution.html</loc>
 </url>
 <url>
-<loc>http://localhost:4000/ycj/vigenere.html</loc>
+<loc>http://23.253.253.83//ycj/vigenere.html</loc>
 </url>
 <url>
-<loc>http://localhost:4000/ycj/base64.html</loc>
+<loc>http://23.253.253.83//ycj/base64.html</loc>
 </url>
 <url>
-<loc>http://localhost:4000/ycj/challenges.html</loc>
+<loc>http://23.253.253.83//ycj/challenges.html</loc>
 </url>
 <url>
-<loc>http://localhost:4000/ycj/</loc>
+<loc>http://23.253.253.83//ycj/</loc>
 </url>
 </urlset>
